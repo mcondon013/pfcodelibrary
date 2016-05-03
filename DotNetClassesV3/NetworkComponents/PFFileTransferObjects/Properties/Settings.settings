@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PFFileTransferObjects.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SftpLicenseUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ProFast Computing 102329</Value>
+    </Setting>
+    <Setting Name="SftpLicenseKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WCFlEe1af4J7i7fz4cahwsLjMGrBbMzp4tmKJwx8cro=</Value>
+    </Setting>
+    <Setting Name="FtpLicenseUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ProFast Computing 102285</Value>
+    </Setting>
+    <Setting Name="FtpLicenseKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+iVjrdXN7bYk7Lu+Cn10ongLDkAJecukeV6fFDCuMLU=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

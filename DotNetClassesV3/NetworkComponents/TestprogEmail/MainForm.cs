@@ -1,0 +1,367 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+using AppGlobals;
+using PFFileSystemObjects;
+
+namespace TestprogEmail
+{
+    public partial class MainForm : Form
+    {
+        private StringBuilder _msg = new StringBuilder();
+        private StringBuilder _str = new StringBuilder();
+        private bool _saveErrorMessagesToAppLog = true;
+        private string _appLogFileName = @"app.log";
+
+        //private fields for processing file and folder dialogs
+        private OpenFileDialog _openFileDialog = new OpenFileDialog();
+        private SaveFileDialog _saveFileDialog = new SaveFileDialog();
+        private FolderBrowserDialog _folderBrowserDialog = new FolderBrowserDialog();
+        private string _saveSelectionsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        private string _saveSelectionsFile = string.Empty;
+        private string[] _saveSelectedFiles = null;
+        private bool _saveMultiSelect = true;
+        private string _saveFilter = "Text Files|*.txt|All Files|*.*";
+        private int _saveFilterIndex = 1;
+        private bool _showCreatePrompt = true;
+        private bool _showOverwritePrompt = true;
+        private bool _showNewFolderButton = true;
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        //button click events
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        private void cmdRunTest_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        //Menu item clicks
+        private void mnuFileExit_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+
+        //Form Routines
+        private void CloseForm()
+        {
+            this.Close();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            string configValue = string.Empty;
+
+            try
+            {
+                this.Text = AppInfo.AssemblyProduct;
+
+                configValue = AppGlobals.AppConfig.GetConfigValue("SaveErrorMessagesToErrorLog");
+                if (configValue.ToUpper() == "TRUE")
+                    _saveErrorMessagesToAppLog = true;
+                else
+                    _saveErrorMessagesToAppLog = false;
+                _appLogFileName = AppGlobals.AppConfig.GetConfigValue("AppLogFileName");
+
+                if (_appLogFileName.Trim().Length > 0)
+                    AppGlobals.AppMessages.AppLogFilename = _appLogFileName;
+
+                this.chkEraseOutputBeforeEachTest.Checked = true;
+
+                this.txtSmtpServer.Text = AppConfig.GetStringValueFromConfigFile("SmtpServer", Environment.MachineName);
+                this.txtSmtpPort.Text = AppConfig.GetStringValueFromConfigFile("SmtpPort", "25");
+                this.chkUseSsl.Checked = AppConfig.GetBooleanValueFromConfigFile("EnableSsl", "false");
+                this.txtSendTimeout.Text = AppConfig.GetStringValueFromConfigFile("SendTimeout", "100000");
+                this.txtMaxIdleTime.Text = AppConfig.GetStringValueFromConfigFile("MaxIdleTime", "1");
+                this.txtFromAddress.Text = AppConfig.GetStringValueFromConfigFile("FromAddress", string.Empty);
+                this.txtToAddress.Text = AppConfig.GetStringValueFromConfigFile("ToAddress", string.Empty);
+                this.txtCCAddress.Text = AppConfig.GetStringValueFromConfigFile("CcAddress", string.Empty);
+                this.txtBCCAddress.Text = AppConfig.GetStringValueFromConfigFile("BccAddress", string.Empty);
+                this.txtSubjectLine.Text = AppConfig.GetStringValueFromConfigFile("MessageSubject", string.Empty);
+                this.txtMessageBody.Text = AppConfig.GetStringValueFromConfigFile("MessageBody", string.Empty);
+
+
+            }
+            catch (System.Exception ex)
+            {
+                _msg.Length = 0;
+                _msg.Append(AppGlobals.AppMessages.FormatErrorMessage(ex));
+                Program._messageLog.WriteLine(_msg.ToString());
+                AppMessages.DisplayErrorMessage(_msg.ToString(), _saveErrorMessagesToAppLog);
+            }
+
+        }
+
+
+        private void EnableFormControls()
+        {
+            TextBox txt = null;
+            CheckBox chk = null;
+            Button btn = null;
+            MenuStrip mnu = null;
+            GroupBox grp = null;
+            Panel pnl = null;
+            ListBox lst = null;
+            ComboBox cbo = null;
+
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is MenuStrip)
+                {
+                    mnu = (MenuStrip)ctl;
+                    foreach (ToolStripItem itm in mnu.Items)
+                    {
+                        itm.Enabled = true;
+                    }
+                }
+                if (ctl is TextBox)
+                {
+                    txt = (TextBox)ctl;
+                    ctl.Enabled = true;
+                }
+                if (ctl is CheckBox)
+                {
+                    chk = (CheckBox)ctl;
+                    chk.Enabled = true;
+                }
+                if (ctl is Button)
+                {
+                    btn = (Button)ctl;
+                    btn.Enabled = true;
+                }
+                if (ctl is GroupBox)
+                {
+                    grp = (GroupBox)ctl;
+                    grp.Enabled = true;
+                }
+                if (ctl is Panel)
+                {
+                    pnl = (Panel)ctl;
+                    pnl.Enabled = true;
+                }
+                if (ctl is ListBox)
+                {
+                    lst = (ListBox)ctl;
+                    lst.Enabled = true;
+                }
+                if (ctl is ComboBox)
+                {
+                    cbo = (ComboBox)ctl;
+                    cbo.Enabled = true;
+                }
+
+            }//end foreach
+        }//end method
+
+        private void DisableFormControls()
+        {
+            TextBox txt = null;
+            CheckBox chk = null;
+            Button btn = null;
+            MenuStrip mnu = null;
+            GroupBox grp = null;
+            Panel pnl = null;
+            ListBox lst = null;
+            ComboBox cbo = null;
+
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is MenuStrip)
+                {
+                    mnu = (MenuStrip)ctl;
+                    foreach (ToolStripItem itm in mnu.Items)
+                    {
+                        itm.Enabled = false;
+                    }
+                }
+                if (ctl is TextBox)
+                {
+                    txt = (TextBox)ctl;
+                    ctl.Enabled = false;
+                }
+                if (ctl is CheckBox)
+                {
+                    chk = (CheckBox)ctl;
+                    chk.Enabled = false;
+                }
+                if (ctl is Button)
+                {
+                    btn = (Button)ctl;
+                    btn.Enabled = false;
+                }
+                if (ctl is GroupBox)
+                {
+                    grp = (GroupBox)ctl;
+                    grp.Enabled = false;
+                }
+                if (ctl is Panel)
+                {
+                    pnl = (Panel)ctl;
+                    pnl.Enabled = false;
+                }
+                if (ctl is ListBox)
+                {
+                    lst = (ListBox)ctl;
+                    lst.Enabled = false;
+                }
+                if (ctl is ComboBox)
+                {
+                    cbo = (ComboBox)ctl;
+                    cbo.Enabled = false;
+                }
+
+            }//end foreach control
+
+        }//end method
+
+        //routines for processing file open, file save and folder browser dialogs
+        private DialogResult ShowOpenFileDialog()
+        {
+            DialogResult res = DialogResult.None;
+            _openFileDialog.InitialDirectory = _saveSelectionsFolder;
+            _openFileDialog.FileName = _saveSelectionsFile;
+            _openFileDialog.Filter = _saveFilter;
+            _openFileDialog.FilterIndex = _saveFilterIndex;
+            _openFileDialog.Multiselect = _saveMultiSelect;
+            _saveSelectionsFile = string.Empty;
+            _saveSelectedFiles = null;
+            res = _openFileDialog.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                _saveSelectionsFolder = Path.GetDirectoryName(_openFileDialog.FileName);
+                _saveSelectionsFile = _openFileDialog.FileName;
+                _saveFilterIndex = _openFileDialog.FilterIndex;
+                if (_openFileDialog.Multiselect)
+                {
+                    _saveSelectedFiles = _openFileDialog.FileNames;
+                }
+            }
+            return res;
+        }
+
+        private DialogResult ShowSaveFileDialog()
+        {
+            DialogResult res = DialogResult.None;
+            _saveFileDialog.InitialDirectory = _saveSelectionsFolder;
+            _saveFileDialog.FileName = _saveSelectionsFile;
+            _saveFileDialog.Filter = _saveFilter;
+            _saveFileDialog.FilterIndex = _saveFilterIndex;
+            _saveFileDialog.CreatePrompt = _showCreatePrompt;
+            _saveFileDialog.OverwritePrompt = _showOverwritePrompt;
+            res = _saveFileDialog.ShowDialog();
+            _saveSelectionsFile = string.Empty;
+            if (res == DialogResult.OK)
+            {
+                _saveSelectionsFolder = Path.GetDirectoryName(_saveFileDialog.FileName);
+                _saveSelectionsFile = _saveFileDialog.FileName;
+                _saveFilterIndex = _saveFileDialog.FilterIndex;
+            }
+            return res;
+        }
+
+        private DialogResult ShowFolderBrowserDialog()
+        {
+            DialogResult res = DialogResult.None;
+
+            string folderPath = string.Empty;
+
+            if (_saveSelectionsFolder.Length > 0)
+                folderPath = _saveSelectionsFolder;
+            else
+                folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            _folderBrowserDialog.ShowNewFolderButton = _showNewFolderButton;
+            //_folderBrowserDialog.RootFolder = 
+            _folderBrowserDialog.SelectedPath = folderPath;
+            res = _folderBrowserDialog.ShowDialog();
+            if (res != DialogResult.Cancel)
+            {
+                folderPath = _folderBrowserDialog.SelectedPath;
+                _str.Length = 0;
+                _str.Append(folderPath);
+                if (folderPath.EndsWith(@"\") == false)
+                    _str.Append(@"\");
+                _saveSelectionsFolder = folderPath;
+            }
+
+
+            return res;
+        }
+
+        //application routines
+        private void RunTests()
+        {
+
+            int nNumTestsSelected = 0;
+
+            try
+            {
+                DisableFormControls();
+                Tests.SaveErrorMessagesToAppLog = _saveErrorMessagesToAppLog;
+
+                if (this.chkEraseOutputBeforeEachTest.Checked)
+                {
+                    Program._messageLog.Clear();
+                }
+
+                if (this.chkSMTPQuickTest.Checked)
+                {
+                    nNumTestsSelected++;
+                    Tests.SMTPQuickTest();
+                }
+
+                if (this.chkSmtpTest.Checked)
+                {
+                    nNumTestsSelected++;
+                    Tests.SmtpTest(this);
+                }
+
+                if (this.chkResendEmailsTest.Checked)
+                {
+                    nNumTestsSelected++;
+                    Tests.ResendEmailsTest(this);
+                }
+
+                if (nNumTestsSelected == 0)
+                {
+                    AppMessages.DisplayInfoMessage("No tests selected ...", false);
+                }
+
+            }
+            catch (System.Exception ex)
+            {
+                _msg.Length = 0;
+                _msg.Append(AppGlobals.AppMessages.FormatErrorMessage(ex));
+                Program._messageLog.WriteLine(_msg.ToString());
+                AppMessages.DisplayErrorMessage(_msg.ToString(), _saveErrorMessagesToAppLog);
+            }
+            finally
+            {
+                EnableFormControls();
+                _msg.Length = 0;
+                _msg.Append("\r\n");
+                _msg.Append("Number of tests run: ");
+                _msg.Append(nNumTestsSelected.ToString("#,##0"));
+                Program._messageLog.WriteLine(_msg.ToString());
+            }
+
+
+
+        }
+
+
+    }//end class
+}//end namespace
