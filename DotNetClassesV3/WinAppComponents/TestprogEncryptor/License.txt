@@ -1,0 +1,17 @@
+pfEncryptor is a freeware application and is the property of ProFast Computing, Waltham, MA 02451, copyright @2012-2014.
+
+THIS SOFTWARE IS NOT FOR SALE: 
+pfEncryptor software is licensed to you as the end user. It is not sold.
+You may freely distribute pfEncryptor to your co-workers and others so that they may use the product as part of their work activities. 
+
+You are prohibited by this license from selling or reselling pfEncryptor.
+
+WARRANTY DISCLAIMER; LIMITATION OF LIABILITY.  
+
+ProFast Computing provides the pfEncryptor software "as-is" and disclaims all warranties, either express or implied, including, but not limited to implied warranties of merchantability and fitness for a particular purpose, with respect to the product. ProFast Computing does not warrant that the pfEncryptor software is secure, free from bugs, viruses, interruption, errors, or other program limitations. Should the program prove defective, the purchaser assumes the risk of paying the entire cost of all necessary servicing, repair, or correction and any incidental or consequential damages.
+
+To the extent that this Warranty Statement is inconsistent with the jurisdiction where the purchaser uses the pfEncryptor software, the Warranty Statement shall be deemed to be modified consistent with such local law.  Under such local law, certain limitations may not apply, and you may have additional rights which vary from jurisdiction to jurisdiction. 
+In no event will ProFast Computing be liable for any damages whatsoever (including without limitation damages for loss of business profits, business interruption, loss of business information and the like) arising out of the use or the inability to use this product, even if ProFast Computing has been advised of the possibility of such damages.
+
+
+

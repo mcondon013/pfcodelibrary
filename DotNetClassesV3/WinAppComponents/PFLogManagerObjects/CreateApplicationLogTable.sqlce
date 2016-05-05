@@ -1,0 +1,20 @@
+drop table ApplicationLog
+go
+create table ApplicationLog
+(
+	LogEntryId int identity(1,1) not null
+   ,LogEntryDateTime datetime
+   ,ApplicationName nvarchar(100)
+   ,MachineName nvarchar(100)
+   ,Username nvarchar(100)
+   ,MessageLevel nvarchar(25)
+   ,MessageText ntext
+   ,LogMessageObject ntext
+)
+go
+create index idx_LogEntryDateTime on ApplicationLog(LogEntryDateTime, ApplicationName, MessageLevel)
+go
+create index idx_ApplicationName on ApplicationLog(ApplicationName, MessageLevel)
+go
+create index idx_MessageLevel on ApplicationLog(MessageLevel, ApplicationName)
+go

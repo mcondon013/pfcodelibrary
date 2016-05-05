@@ -1,0 +1,8 @@
+1) Fixed status reporting to be more responsive. 2) Fixed problem with printing user settings.
+
+<ul>
+   <li>Fixed status reporting to be more responsive.</li>
+   <li>Fixed problem with printing user settings.</li>
+</ul> 
+
+ update-windows@softpedia.com
