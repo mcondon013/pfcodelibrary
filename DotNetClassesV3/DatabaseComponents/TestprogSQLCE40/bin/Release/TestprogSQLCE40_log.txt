@@ -1,0 +1,92 @@
+--------------------------------------------------
+Error:
+5/28/2013 8:28:55 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+
+--------------------------------------------------
+Error:
+6/11/2013 6:03:33 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ TestTableX01 ]
+
+--------------------------------------------------
+Error:
+6/11/2013 6:18:33 PM
+--------------------------------------------------
+Source: TestprogSQLCE40: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+6/11/2013 6:23:23 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+6/11/2013 6:28:50 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : String truncation: max=0, len=26, value='System.Char[]'.
+
+--------------------------------------------------
+Error:
+6/11/2013 6:30:06 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p1 : String truncation: max=0, len=26, value='System.Char[]'.
+
+--------------------------------------------------
+Error:
+6/11/2013 6:33:02 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: SQL Server Compact ADO.NET Data Provider: 
+The specified data type is not valid. [ Data type (if known) = text ]
+
+--------------------------------------------------
+Error:
+6/12/2013 7:17:24 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+6/12/2013 7:31:14 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+6/12/2013 7:32:00 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+6/12/2013 7:32:50 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX01: Source: System.Data: 
+@p13 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+10/15/2013 4:45:21 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+

@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFSystemObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFSystemObjects.WinAppConsole">
+            <summary>Simple class to allow creation and destruction of Consoles.</summary>
+        </member>
+        <member name="M:PFSystemObjects.WinAppConsole.Create">
+            <summary>
+            Creates a console output window, if one doesn't already exist.
+            This window will receive all outputs from System.Console.Write()
+            </summary>
+            <returns>
+            0 if successful, else the Windows API error code from Marshal.GetLastWin32Error()
+            </returns>
+            <remarks>See the AllocConsole() function in the Windows API for full details.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WinAppConsole.Destroy">
+            <summary>
+            Destroys the console window, if it exists.
+            </summary>
+            <returns>
+            0 if successful, else the Windows API error code from Marshal.GetLastWin32Error()
+            </returns>
+            <remarks>See the FreeConsole() function in the Windows API for full details.</remarks>
+        </member>
+        <member name="T:PFSystemObjects.SysInfo">
+            <summary>
+            Class for retrieving various kinds of system information.
+            </summary>
+        </member>
+        <member name="T:PFSystemObjects.WindowsRegistry">
+            <summary>
+            Class for reading and writing the Windows registry.
+            </summary>
+            <remarks>if running on a 64-bit machine, the HKEY_LOCAL_MACHINE code show up under the Wow6432Node.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.RegistryValueNameExists(System.String,System.String,System.String)">
+            <summary>
+            Verifies whether or not a particular value name exists.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <returns>True/False.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.DeleteRegistryValue(System.String,System.String,System.String)">
+            <summary>
+            Deletes a value from the registry.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <returns>True if success. Otherwise false.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValueString(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as string.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>String representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValueInt(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as an integer (int).
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>Int representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValueLong(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as a long.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>Long representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValueBinary(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as a byte array.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>Byte array representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValueObject(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as an object.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>Object representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.GetRegistryValue(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Retrieve a registry value as a pfRegistryValue struct.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="defaultValue">Value if registry path not found.</param>
+            <returns>pfRegistryValue struct representing value.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.SetRegistryValue(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Writes a value to the registry.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="value">Value to set for the value name.</param>
+            <returns>pfRegistryValue struct.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.SetRegistryValue(System.String,System.String,System.String,System.Object,Microsoft.Win32.RegistryValueKind)">
+            <summary>
+            Writes a value to the registry.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <param name="valueName">Name of the value. For example: ConnectionString</param>
+            <param name="value">Value to set for the value name.</param>
+            <param name="valueKind">Specifies type of value to write. (e.g. binary, string, expandstring, multistring, dword, Qword) See <see cref="T:Microsoft.Win32.RegistryValueKind"/> for more information. </param>
+            <returns>pfRegistryValue struct.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.RegistrySubKeyExists(System.String,System.String)">
+            <summary>
+            Verifies whether or not a key/subkey path exists.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <returns>True or False.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.DeleteRegistrySubKey(System.String,System.String)">
+            <summary>
+            Deletes subkey from registry.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <returns>True if success; otherwise false.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="M:PFSystemObjects.WindowsRegistry.CreateRegistrySubKey(System.String,System.String)">
+            <summary>
+            Creates the registry subKey specified by the parameters.
+            </summary>
+            <param name="baseKey">HKEY_CLASSES_ROOT, HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CONFIG</param>
+            <param name="subKey">Full path of subkey. For example: SOFTWARE\CompanyName\InternalApps\WinAppComponents\Program01</param>
+            <returns>True if success; otherwise false.</returns>
+            <remarks>Throws an exception if an error is encountered during processing.</remarks>
+        </member>
+        <member name="T:PFSystemObjects.WindowsAssembly">
+            <summary>
+            Class contains various methods for creating and instantiating objects dynamically.
+            </summary>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.Load(System.String)">
+            <summary>
+            Loads assembly from specified file location 
+            </summary>
+            <param name="fileName">Path to the file containing the assembly.</param>
+            <returns>Assembly object.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.LoadType(System.String,System.String)">
+            <summary>
+            Loads assembly and then retrieves requested type from the assembly.
+            </summary>
+            <param name="fileName">Path to the file containing the assembly.</param>
+            <param name="pType">The full name of the type.</param>
+            <returns>Type object.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.LoadAndInstantiateType(System.String,System.String)">
+            <summary>
+            Loads and instantiates requested type from specified assembly file.
+            </summary>
+            <param name="fileName">Path to the file containing the assembly.</param>
+            <param name="pType">The full name of the type.</param>
+            <returns>Instantiated object of the requested type.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.GetType(System.Reflection.Assembly,System.String)">
+            <summary>
+            Retrieves requested type from the specified assembly.
+            </summary>
+            <param name="asm">Assembly containing the type.</param>
+            <param name="pType">Type to get.</param>
+            <returns>Type object.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.GetType(System.String)">
+            <summary>
+            Retrieves requested type from the currently executing assembly.
+            </summary>
+            <param name="pType">The full name of the type.</param>
+            <returns>Type object.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.GetPropertyValue(System.Object,System.String,System.Object[])">
+            <summary>
+            Retrieves a value for the specified property contained in the object instance.
+            </summary>
+            <param name="pInstance">Instance of object containing property value to be returned.</param>
+            <param name="pProperty">Name of the property.</param>
+            <param name="pIndex">Null if property is not indexed. Otherwise specify the required index or indexes.</param>
+            <returns>Object containing the value of the property.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.InstantiateType(System.Type)">
+            <summary>
+            Activates an instance of the specified type from the currently executing assembly.
+            </summary>
+            <param name="pType">Type to be instantiated.</param>
+            <returns>Instantiated object of the requested type.</returns>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.InvokeVoidMethodNoArguments(System.Type,System.String)">
+            <summary>
+            Invokes a method on the specified class. Method does not have any parameters and does not have a return value.
+            </summary>
+            <param name="pType">Type containing method to run.</param>
+            <param name="methodName">Name of the method.</param>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.InvokeVoidMethodWithArguments(System.Type,System.String,System.Object[])">
+            <summary>
+            Invokes a method on the specified class. Method has parameters but does not have a return value.
+            </summary>
+            <param name="pType">Type containing method to run.</param>
+            <param name="methodName">Name of the method.</param>
+            <param name="args">Array of argument values to pass to the method.</param>
+        </member>
+        <member name="M:PFSystemObjects.WindowsAssembly.InvokeMethod(System.Type,System.String,System.Object[])">
+            <summary>
+            Invokes a method on the specified class. Method takes arguments. 
+            </summary>
+            <param name="pType">Type containing method to run.</param>
+            <param name="methodName">Name of the method.</param>
+            <param name="args">Array of argument values to pass to the method.</param>
+            <returns>Object containing the return value.</returns>
+        </member>
+    </members>
+</doc>

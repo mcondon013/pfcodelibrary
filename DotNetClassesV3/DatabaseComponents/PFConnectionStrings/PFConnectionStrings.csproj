@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5320A140-F5B9-48F4-9E08-5257FA728FBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PFConnectionStrings</RootNamespace>
+    <AssemblyName>PFConnectionStrings</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFConnectionStrings.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PFAppDataObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFAppDataObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFAppUtils, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFAppUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="PFCollectionsObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFCollectionsObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFConnectionObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFConnectionObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFDataAccessObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFDataAccessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFFileSystemObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFFileSystemObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFGlobalObjects, Version=3.0.5958.19865, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFGlobalObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFListObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFListObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFSystemObjects, Version=3.0.5958.17731, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFSystemObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFTextFile, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFTextFile.dll</HintPath>
+    </Reference>
+    <Reference Include="PFTextObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFTextObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionStringPrompt.cs" />
+    <Compile Include="ConnectionStringElements.cs" />
+    <Compile Include="DB2ConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB2ConnectionStringForm.Designer.cs">
+      <DependentUpon>DB2ConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformixConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformixConnectionStringForm.Designer.cs">
+      <DependentUpon>InformixConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MruListProcessor.cs" />
+    <Compile Include="MSAccessConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSAccessConnectionStringForm.Designer.cs">
+      <DependentUpon>MSAccessConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSOracleConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSOracleConnectionStringForm.Designer.cs">
+      <DependentUpon>MSOracleConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQLConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySQLConnectionStringForm.Designer.cs">
+      <DependentUpon>MySQLConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdbcConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdbcConnectionStringForm.Designer.cs">
+      <DependentUpon>OdbcConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OleDbConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OleDbConnectionStringForm.Designer.cs">
+      <DependentUpon>OleDbConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OracleConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OracleConnectionStringForm.Designer.cs">
+      <DependentUpon>OracleConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFConnectionStringForm.Designer.cs">
+      <DependentUpon>PFConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFConnectionStringFormOLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFConnectionStringFormOLD.Designer.cs">
+      <DependentUpon>PFConnectionStringFormOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IConnectionStringForm.cs" />
+    <Compile Include="PFConnectionStringManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFConnectionStringManagerForm.Designer.cs">
+      <DependentUpon>PFConnectionStringManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SQLAnywhereConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLAnywhereConnectionStringForm.Designer.cs">
+      <DependentUpon>SQLAnywhereConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLAnywhereULConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLAnywhereULConnectionStringForm.Designer.cs">
+      <DependentUpon>SQLAnywhereULConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerCE35ConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLServerCE35ConnectionStringForm.Designer.cs">
+      <DependentUpon>SQLServerCE35ConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerCE40ConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLServerCE40ConnectionStringForm.Designer.cs">
+      <DependentUpon>SQLServerCE40ConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLServerConnectionStringForm.Designer.cs">
+      <DependentUpon>SQLServerConnectionStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SybaseConnectionStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SybaseConnectionStringForm.Designer.cs">
+      <DependentUpon>SybaseConnectionStringForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DB2ConnectionStringForm.resx">
+      <DependentUpon>DB2ConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformixConnectionStringForm.resx">
+      <DependentUpon>InformixConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSAccessConnectionStringForm.resx">
+      <DependentUpon>MSAccessConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSOracleConnectionStringForm.resx">
+      <DependentUpon>MSOracleConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySQLConnectionStringForm.resx">
+      <DependentUpon>MySQLConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdbcConnectionStringForm.resx">
+      <DependentUpon>OdbcConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OleDbConnectionStringForm.resx">
+      <DependentUpon>OleDbConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OracleConnectionStringForm.resx">
+      <DependentUpon>OracleConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFConnectionStringForm.resx">
+      <DependentUpon>PFConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFConnectionStringFormOLD.resx">
+      <DependentUpon>PFConnectionStringFormOLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFConnectionStringManagerForm.resx">
+      <DependentUpon>PFConnectionStringManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLAnywhereConnectionStringForm.resx">
+      <DependentUpon>SQLAnywhereConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLAnywhereULConnectionStringForm.resx">
+      <DependentUpon>SQLAnywhereULConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLServerCE35ConnectionStringForm.resx">
+      <DependentUpon>SQLServerCE35ConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLServerCE40ConnectionStringForm.resx">
+      <DependentUpon>SQLServerCE40ConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLServerConnectionStringForm.resx">
+      <DependentUpon>SQLServerConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SybaseConnectionStringForm.resx">
+      <DependentUpon>SybaseConnectionStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>..\..\..\..\..\Binaries\ProFast\CopyPFBinary.bat $(TargetPath) $(TargetFileName) $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

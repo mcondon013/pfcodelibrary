@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PFDelimitedDataLine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LineTerminator>
+</LineTerminator>
+  <ColumnNamesOnFirstLine>true</ColumnNamesOnFirstLine>
+  <ColumnSeparator>,</ColumnSeparator>
+  <NumberOfColumns>8</NumberOfColumns>
+  <ColumnDefinitions>
+    <ColumnDefinition>
+      <PFColDef>
+        <ColumnName>LocKey</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>City</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>State</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>Country</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>PostalCode</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>SalesTerritoryRegion</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>SalesTerritoryCountry</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+      <PFColDef>
+        <ColumnName>SalesTerritoryGroup</ColumnName>
+        <ColumnLength>9999999</ColumnLength>
+        <ColumnDataAlignment>LeftJustify</ColumnDataAlignment>
+      </PFColDef>
+    </ColumnDefinition>
+    <NumberOfColumns>8</NumberOfColumns>
+  </ColumnDefinitions>
+</PFDelimitedDataLine>

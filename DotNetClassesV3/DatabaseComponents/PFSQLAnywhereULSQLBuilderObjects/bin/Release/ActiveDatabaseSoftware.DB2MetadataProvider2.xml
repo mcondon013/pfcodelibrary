@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveDatabaseSoftware.DB2MetadataProvider2</name>
+    </assembly>
+    <members>
+        <member name="T:ActiveDatabaseSoftware.ActiveQueryBuilder.DB2MetadataProvider">
+            <summary> Metadata Provider for IBM DB2. </summary>
+        </member>
+        <member name="F:ActiveDatabaseSoftware.ActiveQueryBuilder.DB2ConnectionEditForm.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.DB2ConnectionEditForm.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.DB2ConnectionEditForm.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

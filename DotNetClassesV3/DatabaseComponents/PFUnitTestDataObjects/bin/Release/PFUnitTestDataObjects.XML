@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFUnitTestDataObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFUnitTestDataObjects.PFUnitTestDataTable">
+            <summary>
+            Class used in testing database classes. Contains table definition that includes all data types.
+            </summary>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.#ctor(PFDataAccessObjects.IDatabaseProvider,System.String,System.String,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="db">Database object for database to be used.</param>
+            <param name="schemaName">Name of schema for the table. Leave blank (empty string) if no schema name is required.</param>
+            <param name="tableName">Name of the table. Can be the full qualified name (schemaname.tablename) if you need a schema and the schema name parameter was not specified.</param>
+            <param name="dropOldTable">Specify true if you wish to delete the table if it already exists in the database. You can change this value later by setting the DropOldTable property.</param>
+            <remarks>If the table already exists and the DropOldTable option is set to false, the constructor for this class will throw a System.Exception.</remarks>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.#ctor(PFDataAccessObjects.IDatabaseProvider,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="db">Database object for database to be used.</param>
+            <param name="schemaName">Name of schema for the table. Leave blank (empty string) if no schema name is required.</param>
+            <param name="tableName">Name of the table. Can be the full qualified name (schemaname.tablename) if you need a schema and the schema name parameter was not specified.</param>
+            <remarks>Default is False for the dropOldTable option. Use the DropOldTable property to revise the value to True if you wish to delete the old table before creating a new one.
+             If the table already exists and the DropOldTable option is set to false, the constructor for this class will throw a System.Exception.</remarks>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.SetDataTypesToInclude(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Routine to identify which data types to include in the table to be created.
+            </summary>
+            <param name="dataTypesToInclude">A list of KeyValuePair values. Key = data type fullname, Value = the value to assign to the column of that data type.</param>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.SetDataTypeOptions(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Routine to set the PrimaryKey, AllowNulls and MaximumLength properties of a data type to be included in the table to be created.
+            </summary>
+            <param name="dataTypeFullName">Full name of data type. For example, System.String or System.Int32.</param>
+            <param name="isPrimaryKey">If true, the column will be defined as a primary key. Default is false.</param>
+            <param name="isNullable">If false the column will not allow nulls. By default this value is true.</param>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.SetDataTypeOptions(System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Routine to set the PrimaryKey, AllowNulls and MaximumLength properties of a data type to be included in the table to be created.
+            </summary>
+            <param name="dataTypeFullName">Full name of data type. For example, System.String or System.Int32.</param>
+            <param name="isPrimaryKey">If true, the column will be defined as a primary key. Default is false.</param>
+            <param name="isNullable">If false the column will not allow nulls. By default this value is true.</param>
+            <param name="maxLength">Only set this for System.String.</param>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.SetDataTypeOptions(System.String,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Routine to set the PrimaryKey, AllowNulls and MaximumLength properties of a data type to be included in the table to be created.
+            </summary>
+            <param name="colName">Name of the column which will have its data type changed by the routine.</param>
+            <param name="dataTypeFullName">Full name of data type. For example, System.String or System.Int32.</param>
+            <param name="isPrimaryKey">If true, the column will be defined as a primary key. Default is false.</param>
+            <param name="isNullable">If false the column will not allow nulls. By default this value is true.</param>
+            <param name="maxLength">Only set this for System.String.</param>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.GetDataTableFromTableColumns">
+            <summary>
+            Creates an ADO.NET DataTable object using the table definition contained in the collection of column definitions encapsulated by this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.GetDataTableFromTableColumns(System.Boolean)">
+            <summary>
+            Creates an ADO.NET DataTable object using the table definition contained in the collection of column definitions encapsulated by this instance.
+            </summary>
+            <param name="useDataTypeSubset">If true, then only a small subset of .NET data types will be used. This is needed when trying to create a table via generic OLEDB or ODBC syntax.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.CreateTableFromTableColumns">
+            <summary>
+            Creates a table in the database specified for this instance. Data is loaded from the column definitions encapsulated by this instance.
+            </summary>
+            <returns>True if table is created.</returns>
+            <remarks>Table create will fail if table already exists and you specify false for the DropOldTable option. Specify true for dropOldTable if you
+             want to create the table even if an older version of the table already exists.</remarks>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.ImportTableToDatabase">
+            <summary>
+            Routine to import the data table encapsulated in this instance to a corresponding table in the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFInitClassExtended.</returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFUnitTestDataObjects.PFUnitTestDataTable.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFUnitTestDataObjects.PFUnitTestDataTable.SchemaName">
+            <summary>
+            Specifies name of schema for which the table will be associated. Specify empty string if there will be no schema name for the table.
+            </summary>
+        </member>
+        <member name="P:PFUnitTestDataObjects.PFUnitTestDataTable.TableName">
+            <summary>
+            Specified name of table to be created. Name should be fully qualified if schema and/or catalog are also required as part of the name.
+            </summary>
+        </member>
+        <member name="P:PFUnitTestDataObjects.PFUnitTestDataTable.TableColumns">
+            <summary>
+            Object containing the definitions of the columns that will be included in the table to be created.
+            </summary>
+        </member>
+        <member name="P:PFUnitTestDataObjects.PFUnitTestDataTable.TableCreateScript">
+            <summary>
+            Returns text of the create script to be used for the specified database.
+            </summary>
+        </member>
+        <member name="P:PFUnitTestDataObjects.PFUnitTestDataTable.DropOldTable">
+            <summary>
+            Set to true if you wish any older copy of a table deleted before it is recreated by this instance.
+            </summary>
+        </member>
+    </members>
+</doc>

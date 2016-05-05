@@ -1,0 +1,1195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFConnectionStrings</name>
+    </assembly>
+    <members>
+        <member name="T:PFConnectionStrings.SQLAnywhereULConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereULConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SQLAnywhereULConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereULConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereULConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereULConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereULConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereULConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereULConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereULConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.PFConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.PFConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.ConnectionStringElements">
+            <summary>
+            Used to extract individual keys and values for a connection string.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of ConnectionPromptElements.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringElements.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringElements.ConnectionDefinition">
+            <summary>
+            Object containing information for the connection being defined or used.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringElements.ConnectionKeyVals">
+            <summary>
+            List of one or more connection keys for the connection string.
+            </summary>
+        </member>
+        <member name="T:PFConnectionStrings.SQLAnywhereConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SQLAnywhereConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SQLAnywhereConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLAnywhereConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.SQLServerConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SQLServerConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.OracleConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.OracleConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OracleConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.OracleConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OracleConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OracleConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OracleConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OracleConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OracleConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OracleConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.MySQLConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MySQLConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.MySQLConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MySQLConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MySQLConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MySQLConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MySQLConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MySQLConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MySQLConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MySQLConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.SQLServerCE40ConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE40ConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SQLServerCE40ConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE40ConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE40ConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE40ConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE40ConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE40ConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE40ConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE40ConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.InformixConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.InformixConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.InformixConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.InformixConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.InformixConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.InformixConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.InformixConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.InformixConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.InformixConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.InformixConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="F:PFConnectionStrings.PFConnectionStringManagerForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringManagerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringManagerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringManagerForm.ShowInstalledProvidersOnly">
+            <summary>
+            ShowInstalledProvidersOnly Property.
+            </summary>
+        </member>
+        <member name="T:PFConnectionStrings.OleDbConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.OleDbConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OleDbConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.OleDbConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OleDbConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OleDbConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OleDbConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OleDbConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OleDbConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OleDbConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.DB2ConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.DB2ConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.DB2ConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.DB2ConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.DB2ConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.DB2ConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.DB2ConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.DB2ConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.DB2ConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.DB2ConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:PFConnectionStrings.MSOracleConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MSOracleConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.MSOracleConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MSOracleConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MSOracleConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSOracleConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSOracleConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSOracleConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSOracleConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSOracleConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.SQLServerCE35ConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE35ConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SQLServerCE35ConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE35ConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SQLServerCE35ConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE35ConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE35ConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE35ConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE35ConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SQLServerCE35ConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.SybaseConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SybaseConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.SybaseConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.SybaseConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.SybaseConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SybaseConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SybaseConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SybaseConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SybaseConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.SybaseConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.MSAccessConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.MSAccessConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MSAccessConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MSAccessConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MSAccessConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSAccessConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSAccessConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSAccessConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSAccessConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.MSAccessConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.MruStripMenu">
+            <summary>
+            Represents a most recently used (MRU) menu.
+            </summary>
+            <remarks>This class shows the MRU list in a popup menu. To display
+            the MRU list "inline" use <see labelName="MruMenuInline" />.
+            <para>The class will optionally load the last set of files from the registry
+            on construction and store them when instructed by the main program.</para>
+            <para>Internally, this class uses zero-based numbering for the items.
+            The displayed numbers, however, will start with one.</para></remarks>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler,System.Int32)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+            <param labelName="maxEntries"></param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler,System.String)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+            <param labelName="registryKeyName"></param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+            <param labelName="registryKeyName">The name or path of the registry key to use to store the MRU list and settings.</param>
+            <param labelName="maxEntries">The maximum number of items on the MRU list.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+            <param labelName="registryKeyName">The name or path of the registry key to use to store the MRU list and settings.</param>
+            <param labelName="loadFromRegistry">Loads the MRU settings from the registry immediately.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.#ctor(System.Windows.Forms.ToolStripMenuItem,PFConnectionStrings.MruStripMenu.ClickedHandler,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Initializes a new instance of the MruMenu class.
+            </summary>
+            <param labelName="recentFileMenuItem">The temporary menu item which will be replaced with the MRU list.</param>
+            <param labelName="clickedHandler">The delegate to handle the item selection (click) event.</param>
+            <param labelName="registryKeyName">The name or path of the registry key to use to store the MRU list and settings.</param>
+            <param labelName="loadFromRegistry">Loads the MRU settings from the registry immediately.</param>
+            <param labelName="maxEntries">The maximum number of items on the MRU list.</param>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.ShortenPathname(System.String,System.Int32)">
+            <summary>
+            Shortens a pathname for display purposes.
+            </summary>
+            <param labelName="pathname">The pathname to shorten.</param>
+            <param labelName="maxLength">The maximum number of characters to be displayed.</param>
+            <remarks>Shortens a pathname by either removing consecutive components of a path
+            and/or by removing characters from the end of the filename and replacing
+            then with three elipses (...)
+            <para>In all cases, the root of the passed path will be preserved in it's entirety.</para>
+            <para>If a UNC path is used or the pathname and maxLength are particularly short,
+            the resulting path may be longer than maxLength.</para>
+            <para>This method expects fully resolved pathnames to be passed to it.
+            (Use Path.GetFullPath() to obtain this.)</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.FindFilenameNumber(System.String)">
+            <summary>
+            Returns the entry number matching the passed filename.
+            </summary>
+            <param name="filename">The filename to search for.</param>
+            <returns>The entry number of the matching filename or -1 if not found.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.FindFilenameMenuIndex(System.String)">
+            <summary>
+            Returns the menu index of the passed filename.
+            </summary>
+            <param name="filename">The filename to search for.</param>
+            <returns>The menu index of the matching filename or -1 if not found.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.GetMenuIndex(System.Int32)">
+            <summary>
+            Returns the menu index for a specified MRU item number.
+            </summary>
+            <param name="number">The MRU item number.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+            <returns>The menu index of the passed MRU number.</returns>
+        </member>
+        <member name="T:PFConnectionStrings.MruStripMenu.MruMenuItem">
+            <summary>
+            The menu item which will contain the MRU entry.
+            </summary>
+            <remarks>The menu may display a shortened or otherwise invalid pathname.
+            This class stores the actual filename, preferably as a fully
+            resolved labelName, that will be returned in the event handler.</remarks>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.MruMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the MruMenuItem class.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.MruStripMenu.MruMenuItem.#ctor(System.String,System.String,System.EventHandler)">
+            <summary>
+            Initializes an MruMenuItem object.
+            </summary>
+            <param labelName="filename">The string to actually return in the <paramref labelName="eventHandler">eventHandler</paramref>.</param>
+            <param labelName="entryname">The string that will be displayed in the menu.</param>
+            <param labelName="eventHandler">The <see cref="T:System.EventHandler">EventHandler</see> that 
+            handles the <see cref="E:System.Windows.Forms.MenuItem.Click">Click</see> event for this menu item.</param>
+        </member>
+        <member name="P:PFConnectionStrings.MruStripMenu.MruMenuItem.Filename">
+            <summary>
+            Gets the filename.
+            </summary>
+            <value>Gets the filename.</value>
+        </member>
+        <member name="T:PFConnectionStrings.MruStripMenuInline">
+            <summary>
+            Represents an inline most recently used (mru) menu.
+            </summary>
+            <remarks>
+            This class shows the MRU list "inline". To display
+            the MRU list as a popup menu use <see labelName="MruMenu">MruMenu</see>.
+            </remarks>
+        </member>
+        <member name="T:PFConnectionStrings.PFConnectionStringFormOLD">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.PFConnectionStringFormOLD.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringFormOLD.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringFormOLD.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.PFConnectionStringFormOLD.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.ConnectionManager">
+            <summary>
+            ConnectionManager object to use for processing connection information.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.PFConnectionStringFormOLD.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.OdbcConnectionStringForm">
+            <summary>
+            Class for displaying a form for the input of values for connection string keys.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OdbcConnectionStringForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="F:PFConnectionStrings.OdbcConnectionStringForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.OdbcConnectionStringForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFConnectionStrings.OdbcConnectionStringForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OdbcConnectionStringForm.DbPlatform">
+            <summary>
+            Database platform represented by current instance.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OdbcConnectionStringForm.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OdbcConnectionStringForm.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OdbcConnectionStringForm.CSP">
+            <summary>
+            ConnectionStringPrompt object that instantiated this instance of the connection string form.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.OdbcConnectionStringForm.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="T:PFConnectionStrings.ConnectionStringPrompt">
+            <summary>
+            Basic prototype for a ProFast application or library class.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.#ctor(PFDataAccessObjects.DatabasePlatform,PFConnectionObjects.PFConnectionManager)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.ShowConnectionPrompt">
+            <summary>
+            Displays the form dialog for inputting values for connection string keys.
+            </summary>
+            <returns>OK if input is to be accepted by the caller. Cancel if input should be ignored by the caller.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.BuildConnectionDefinition(System.String,System.String,PFConnectionObjects.enConnectionAccessStatus)">
+            <summary>
+            Routine to create a connection definition object.
+            </summary>
+            <param name="connectionName">Name for the connection definition.</param>
+            <param name="connectionString">Connection string associated with the connection name.</param>
+            <param name="connectionAccessStatus">Last connection access status: e.g. open, closed, unknown.</param>
+            <returns>Connection definition object.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.GetConnectionDefinition">
+            <summary>
+            Retrieves all connection definitions defined and saved by current user.
+            </summary>
+            <returns>PFConnectionDefinition object.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.GetConnectionDefinition(PFDataAccessObjects.DatabasePlatform)">
+            <summary>
+            Retrieves connection definitions defined and saved by current user for the specified database platform.
+            </summary>
+            <param name="dbPlat">DatabasePlatform used in the connection strings to be retrieved.</param>
+            <returns>PFConnectionDefinition object.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.SaveConnectionDefinition(PFConnectionObjects.PFConnectionDefinition)">
+            <summary>
+            Saves connection definition to external storage.
+            </summary>
+            <param name="connDef">Connection definition object to be saved.</param>
+            <returns>Path to saved XML file containing connection definition.</returns>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.RenameConnectionDefinition(PFDataAccessObjects.DatabasePlatform)">
+            <summary>
+            Allows renaming of connection definitions from list of saved definitions.
+            </summary>
+            <param name="dbPlat">Database platform for which the connections are defined.</param>
+        </member>
+        <member name="M:PFConnectionStrings.ConnectionStringPrompt.DeleteConnectionDefinition(PFDataAccessObjects.DatabasePlatform)">
+            <summary>
+            Allows deleting of connection definitions from list of saved definitions.
+            </summary>
+            <param name="dbPlat">Database platform for which the connections are defined.</param>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.DbPlatform">
+            <summary>
+            DbPlatform Property contains one of the values in the DatabasePlatform enumeration.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.ConnectionManager">
+            <summary>
+            ConnectionManager property identifies object that is used for various operations on connection elements.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.ConnectionName">
+            <summary>
+            Name that will be used to identify the connection.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.ConnectionString">
+            <summary>
+            Connection string that can be used to connect to the database.
+            </summary>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.ConnectionAccessStatus">
+            <summary>
+            Connection status returned when the connection string was verified: IsAccessible, NotAccessible or Unknown.
+            </summary>
+            <remarks>Verification involved attempting to logon using the connection string.</remarks>
+        </member>
+        <member name="P:PFConnectionStrings.ConnectionStringPrompt.ConnectionDefinition">
+            <summary>
+            Object which represents several pieces of information associated with a particular connection.
+            </summary>
+        </member>
+    </members>
+</doc>

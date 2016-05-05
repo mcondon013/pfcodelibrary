@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AADCE1A8-03DF-434D-A65F-4258B96C9A9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PFInformixSQLBuilderObjects</RootNamespace>
+    <AssemblyName>PFInformixSQLBuilderObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFSQLBuilderObjects.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveDatabaseSoftware.ActiveQueryBuilder2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.ActiveQueryBuilder2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.ConfigurationWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.ConfigurationWizard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.DevExpressControlFactory2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.DevExpressControlFactory2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.EventMetadataProvider2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.EventMetadataProvider2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.ExpressionEditor2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.ExpressionEditor2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.InformixMetadataProvider2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.InformixMetadataProvider2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.MetadataXmlConverter, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.MetadataXmlConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.ODBCMetadataProvider2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.ODBCMetadataProvider2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.OLEDBMetadataProvider2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.OLEDBMetadataProvider2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveDatabaseSoftware.UniversalMetadataProvider2, Version=2.9.3.700, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.UniversalMetadataProvider2.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.Informix, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Utilities\IBM\SQLLIB\BIN\netf40\IBM.Data.Informix.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PFDataAccessObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFDataAccessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFFileSystemObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFFileSystemObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFGlobalObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFGlobalObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFSybaseObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFSybaseObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="PFTextObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFTextObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PFQueryBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryBuilderForm.designer.cs">
+      <DependentUpon>QueryBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryParametersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryParametersForm.designer.cs">
+      <DependentUpon>QueryParametersForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="QueryBuilderForm.resx">
+      <DependentUpon>QueryBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryParametersForm.resx">
+      <DependentUpon>QueryParametersForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QbfUsersGuide.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>..\..\..\..\..\Binaries\ProFast\CopyPFBinary.bat $(TargetPath) $(TargetFileName) $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

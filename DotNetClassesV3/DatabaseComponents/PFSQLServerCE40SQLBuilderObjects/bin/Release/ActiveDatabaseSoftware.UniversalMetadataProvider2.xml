@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveDatabaseSoftware.UniversalMetadataProvider2</name>
+    </assembly>
+    <members>
+        <member name="T:ActiveDatabaseSoftware.ActiveQueryBuilder.UniversalMetadataProvider">
+            <summary>Metadata Provider for generic .NET data provider (IDbConnection interface).</summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ActiveQueryBuilder.UniversalMetadataProvider.Connection">
+            <summary>Refers to the object that implements the IDbConnection interface.</summary>
+        </member>
+    </members>
+</doc>

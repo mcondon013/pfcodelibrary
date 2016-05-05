@@ -1,0 +1,432 @@
+--------------------------------------------------
+Error:
+12/25/2012 11:58:54 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+File already exists. Try using a different database name. [ File name = c:\temp\newdb2.sdf ]
+
+--------------------------------------------------
+Error:
+12/25/2012 12:15:09 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+File already exists. Try using a different database name. [ File name = c:\temp\testdb2.sdf ]
+
+--------------------------------------------------
+Error:
+12/25/2012 12:16:20 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must specify the file name for CreateDatabaseTest.
+
+--------------------------------------------------
+Error:
+12/25/2012 12:21:01 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+Invalid 'ssce:encryption mode' value in the connection string: EngineDefault.
+
+--------------------------------------------------
+Error:
+12/25/2012 12:29:47 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+File already exists. Try using a different database name. [ File name = c:\temp\Testdb2.sdf ]
+
+--------------------------------------------------
+Error:
+12/25/2012 3:56:38 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+12/25/2012 5:48:51 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+12/25/2012 5:48:55 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must specify the file name.
+
+--------------------------------------------------
+Error:
+12/25/2012 5:55:41 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+ExecuteNonQuery requires an open and available Connection. The connection's current state is Closed.
+
+--------------------------------------------------
+Error:
+12/25/2012 6:00:33 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must specify the file name.
+
+--------------------------------------------------
+Error:
+12/25/2012 6:02:34 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 2,Token line offset = 1,Token in error = insert ]
+
+--------------------------------------------------
+Error:
+12/25/2012 6:03:00 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The number of columns in the query and the table must match. [ Number of columns in query = 4, Number of columns in table = 3 ]
+
+--------------------------------------------------
+Error:
+12/25/2012 6:03:52 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 2,Token line offset = 1,Token in error = insert ]
+
+--------------------------------------------------
+Error:
+12/25/2012 6:35:29 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+ColumnName
+
+--------------------------------------------------
+Error:
+12/25/2012 6:47:04 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+SQL Server Compact does not support calls to HasRows property if the underlying cursor is not scrollable.
+
+--------------------------------------------------
+Error:
+12/25/2012 6:47:54 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+12/25/2012 7:12:15 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+SQL Server Compact does not support calls to HasRows property if the underlying cursor is not scrollable.
+
+--------------------------------------------------
+Error:
+12/29/2012 7:55:16 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 2,Token line offset = 1,Token in error = insert ]
+
+--------------------------------------------------
+Error:
+12/29/2012 8:03:34 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 1,Token line offset = 27,Token in error = ; ]
+
+--------------------------------------------------
+Error:
+12/29/2012 8:04:31 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+A duplicate value cannot be inserted into a unique index. [ Table name = USFirstNamesTestOut,Constraint name = PK_USFirstNamesTestOut ]
+
+--------------------------------------------------
+Error:
+12/29/2012 8:17:42 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The column name is not valid. [ Node name (if any) = *,Column name = * ]
+
+--------------------------------------------------
+Error:
+12/29/2012 8:18:46 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The column name is not valid. [ Node name (if any) = *,Column name = * ]
+
+--------------------------------------------------
+Error:
+1/4/2013 7:16:44 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+1/4/2013 7:16:50 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified password does not match the database password. [ Data Source = C:\SQLData\nametest.sdf ]
+
+--------------------------------------------------
+Error:
+1/4/2013 7:18:59 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+1/4/2013 7:19:03 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 1,Token line offset = 12,Token in error = 25 ]
+
+--------------------------------------------------
+Error:
+1/4/2013 7:46:53 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+Incompatible Database Version. If this was a compatible file, run repair. For other cases refer to documentation. [ Db version = 4000000,Requested version = 3505053,File name = \\?\C:\SQLData\MiketestV4.sdf ]
+
+--------------------------------------------------
+Error:
+1/4/2013 7:49:50 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The database file has been created by an earlier version of SQL Server Compact. Please upgrade using SqlCeEngine.Upgrade() method.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:17:43 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ test1 ]
+
+--------------------------------------------------
+Error:
+1/4/2013 8:42:21 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:42:46 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:44:37 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:44:59 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The database file has been created by an earlier version of SQL Server Compact. Please upgrade using SqlCeEngine.Upgrade() method.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:45:44 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:45:49 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:58:05 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/4/2013 8:58:16 PM
+--------------------------------------------------
+Source: : 
+Native components of SQL Server Compact engine are not loaded. Please reinstall Microsoft SQL Server Compact.
+
+--------------------------------------------------
+Error:
+1/21/2013 9:58:56 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The database file has been created by an earlier version of SQL Server Compact. Please upgrade using SqlCeEngine.Upgrade() method.
+
+--------------------------------------------------
+Error:
+1/21/2013 10:43:09 AM
+--------------------------------------------------
+Source: PFSQLServerObjects: 
+Specified cast is not valid.
+
+--------------------------------------------------
+Error:
+1/27/2013 6:17:21 PM
+--------------------------------------------------
+Source: mscorlib: 
+Access to the path 'c:\TempCeDs.xml' is denied.
+
+--------------------------------------------------
+Error:
+1/28/2013 12:45:42 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+Object reference not set to an instance of an object.
+
+--------------------------------------------------
+Error:
+2/5/2013 4:16:06 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 3,Token line offset = 16,Token in error = max ]
+
+--------------------------------------------------
+Error:
+2/5/2013 4:17:52 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+File already exists. Try using a different database name. [ File name = c:\sqldata\nametestV4.sdf ]
+
+--------------------------------------------------
+Error:
+2/5/2013 4:18:11 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 3,Token line offset = 16,Token in error = max ]
+
+--------------------------------------------------
+Error:
+2/5/2013 4:19:45 PM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+
+--------------------------------------------------
+Error:
+2/5/2013 4:20:04 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 3,Token line offset = 16,Token in error = max ]
+
+--------------------------------------------------
+Error:
+2/5/2013 4:21:22 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+There was an error parsing the query. [ Token line number = 3,Token line offset = 14,Token in error = max ]
+
+--------------------------------------------------
+Error:
+2/5/2013 4:22:36 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified length is too long for the column type. [ Specified length = 4096,Column data type = 8 ]
+
+--------------------------------------------------
+Error:
+2/5/2013 5:50:10 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified data type is not valid. [ Data type (if known) = nvarchar50 ]
+
+--------------------------------------------------
+Error:
+4/9/2013 5:19:43 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+ExecuteReader requires an open and available Connection. The connection's current state is Closed.
+
+--------------------------------------------------
+Error:
+4/9/2013 5:29:44 PM
+--------------------------------------------------
+Source: System.Data.SqlServerCe: 
+SQL Server Compact does not support calls to HasRows property if the underlying cursor is not scrollable.
+
+--------------------------------------------------
+Error:
+4/13/2013 11:23:12 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+
+--------------------------------------------------
+Error:
+4/13/2013 11:25:06 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+
+--------------------------------------------------
+Error:
+4/13/2013 11:34:54 AM
+--------------------------------------------------
+Global Error Handler for TestprogSQLCE
+Source: ActiveDatabaseSoftware.ActiveQueryBuilder2: 
+Object reference not set to an instance of an object.
+
+--------------------------------------------------
+Error:
+4/13/2013 11:53:46 AM
+--------------------------------------------------
+Global Error Handler for TestprogSQLCE
+Source: ActiveDatabaseSoftware.ActiveQueryBuilder2: 
+Object reference not set to an instance of an object.
+
+--------------------------------------------------
+Error:
+4/13/2013 11:58:13 AM
+--------------------------------------------------
+Global Error Handler for TestprogSQLCE
+Source: ActiveDatabaseSoftware.ActiveQueryBuilder2: 
+Object reference not set to an instance of an object.
+
+--------------------------------------------------
+Error:
+4/13/2013 12:12:07 PM
+--------------------------------------------------
+Global Error Handler for TestprogSQLCE
+Source: ActiveDatabaseSoftware.MSSQLMetadataProvider2: 
+Unable to cast object of type 'System.Data.SqlServerCe.SqlCeConnection' to type 'System.Data.SqlClient.SqlConnection'.
+
+--------------------------------------------------
+Error:
+4/13/2013 12:19:07 PM
+--------------------------------------------------
+Global Error Handler for TestprogSQLCE
+Source: ActiveDatabaseSoftware.ActiveQueryBuilder2: 
+Object reference not set to an instance of an object.
+
+--------------------------------------------------
+Error:
+4/13/2013 12:36:22 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The column name cannot be resolved to a table. Specify the table to which the column belongs. [ Name of ambiguous column = FirstName ]
+
+--------------------------------------------------
+Error:
+4/13/2013 12:47:45 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The column name is not valid. [ Node name (if any) = *,Column name = * ]
+
+--------------------------------------------------
+Error:
+5/12/2013 11:12:13 AM
+--------------------------------------------------
+Source: TestprogSQLCE: 
+You must selected type of query to run.
+

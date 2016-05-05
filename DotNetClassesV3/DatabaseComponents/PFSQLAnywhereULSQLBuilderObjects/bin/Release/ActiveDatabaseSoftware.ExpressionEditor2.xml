@@ -1,0 +1,1503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveDatabaseSoftware.ExpressionEditor2</name>
+    </assembly>
+    <members>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.ExpressionEditorView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ActiveDatabaseSoftware.ExpressionEditor.ExpressionEditorSettingsView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.ExpressionEditorSettingsView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.ExpressionEditorSettingsView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.DocumentChangedEventArgs.Offset">
+            <summary>
+            Offset of substring that has been replaced with new Text.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.DocumentChangedEventArgs.Text">
+            <summary>
+            New text that replaces the substring specified by Offset and Length.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.DocumentChangedEventArgs.Length">
+            <summary>
+            Length of substring that has been replaced with new Text.
+            </summary>
+        </member>
+        <member name="F:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.FindAndReplaceView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.FindAndReplaceView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.alias">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.cog">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.collapsed">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.copy">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.cut">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.database">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.DB2SyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to avg
+            AVG
+            AVG(%CURSOR%)
+            SYSIBM AVG([ALL|DISTINCT] expression)\nReturns the average of a set of numbers.
+            correlation
+            CORRELATION
+            CORRELATION(%CURSOR%)
+            SYSIBM CORRELATION(expression1, expression2)\nReturns the coefficient of correlation of a set of number pairs.
+            corr
+            CORR
+            CORR(%CURSOR%)
+            SYSIBM CORR(expression1, expression2)\nReturns the coefficient of correlation of a set of number pairs.
+            count
+            COUNT
+            COUNT(%CURSOR%)
+            SYSIBM COUNT(*| [ALL|DISTINCT] expression)\nReturns the number of rows or values  [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.DB2SyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            corr
+            correlation
+            count
+            count_big
+            covar
+            covariance
+            grouping
+            max
+            min
+            xmlagg
+            regr_avgx
+            regr_avgy
+            regr_count
+            regr_intercept
+            regr_icpt
+            regr_r2
+            regr_slope
+            regr_sxx
+            regr_sxy
+            regr_syy
+            stddev
+            sum
+            var
+            variance
+            activate
+            add
+            after
+            alias
+            all
+            allocate
+            allow
+            alter
+            and
+            any
+            as
+            asensitive
+            associate
+            asutime
+            at
+            attributes
+            audit
+            authorization
+            aux
+            auxiliary
+            before
+            begin
+            between
+            binary
+            bufferpool
+            by
+            cache
+            call
+            called
+            capture
+            cardinality
+            cascaded
+            case
+            cast
+            ccsid
+            char
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.delete">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.expanded">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.field">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.filter">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.find">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.find2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.FirebirdSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to abs
+            ABS
+            ABS(%CURSOR%)
+            ABS (number)\nReturns the absolute value of the argument.
+            acos
+            ACOS
+            ACOS(%CURSOR%)
+            ACOS (number)\nReturns the arc cosine of the argument.
+            ascii_char
+            ASCII_CHAR
+            ASCII_CHAR(%CURSOR%)
+            ASCII_CHAR (&lt;code&gt;)\nReturns the ASCII character corresponding to the number passed in the argument.
+            ascii_val
+            ASCII_VAL
+            ASCII_VAL(%CURSOR%)
+            ASCII_VAL (&lt;ch&gt;)\nReturns the ASCII code of the character passed in.
+            asin
+            ASIN
+            ASIN(%CURSOR%)
+            ASIN (number)\nReturns the arc sine of the argument.
+            a [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.FirebirdSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to action
+            active
+            add
+            admin
+            after
+            all
+            alter
+            and
+            any
+            as
+            asc
+            ascending
+            at
+            auto
+            autoddl
+            avg
+            based
+            basename
+            base_name
+            before
+            begin
+            between
+            blob
+            blobedit
+            buffer
+            by
+            cache
+            cascade
+            cast
+            char
+            character
+            character_length
+            char_length
+            check
+            check_point_len
+            check_point_length
+            collate
+            collation
+            column
+            commit
+            committed
+            compiletime
+            computed
+            close
+            conditional
+            connect
+            constraint
+            containing
+            continue
+            count
+            create
+            cstring
+            current
+            current_date
+            current_time
+            current_timestamp
+            curs [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.function">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.InformixSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to avg
+            AVG
+            AVG(%CURSOR%)
+            AVG(expression)\nReturns the average of a set of numbers.
+            count
+            COUNT
+            COUNT(%CURSOR%)
+            COUNT(* | expression)\nReturns the number of rows or values in a set of rows or values.
+            max
+            MAX
+            MAX(%CURSOR%)
+            MAX(expression)\nReturns the maximum value in a set of values.
+            min
+            MIN
+            MIN(%CURSOR%)
+            MIN(expression)\nReturns the minimum value in a set of values.
+            range
+            RANGE
+            RANGE(%CURSOR%)
+            RANGE(expression)\nComputes the difference between the maximum and the minimum values for the selec [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.InformixSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            min
+            max
+            sum
+            count
+            range
+            stdev
+            variance
+            like
+            between
+            in
+            for
+            read
+            only
+            update
+            of
+            order
+            by
+            asc
+            desc
+            union
+            all
+            where
+            having
+            select
+            skip
+            first
+            limit
+            middle
+            distinct
+            unique
+            group
+            as
+            from
+            cross
+            join
+            inner
+            left
+            right
+            full
+            outer
+            on
+            or
+            and
+            not
+            true
+            false
+            is
+            null
+            escape
+            exists
+            some
+            any
+            rowid
+            row
+            set
+            multiset
+            list
+            case
+            when
+            then
+            else
+            end
+            year
+            month
+            day
+            hour
+            minute
+            second
+            fraction
+            int
+            integer
+            smallint
+            int8
+            smallfloat
+            real
+            text
+            byte
+            date
+            b [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.keyword">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MSAccessSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to asc
+            Asc
+            Asc(%CURSOR%)
+            Asc(string)\nReturns an Integer representing the character code corresponding to the first letter in a string.
+            abs
+            Abs
+            Abs(%CURSOR%)
+            Abs(number)\nReturns a value of the same type that is passed to it specifying the absolute value of a number.
+            atn
+            Atn
+            Atn(%CURSOR%)
+            Atn(number)\nReturns a Double specifying the arctangent of a number.
+            avg
+            Avg
+            Avg(%CURSOR%)
+            Avg(expression)\nCalculates the arithmetic mean of a set of values in a select query.
+            choose
+            Choose
+            Choose(%CURSOR%) [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MSAccessSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to stdev
+            stdevp
+            var
+            varp
+            absolute
+            action
+            add
+            admindb
+            all
+            allocate
+            alphanumeric
+            alter
+            and
+            any
+            are
+            as
+            asc
+            assertion
+            at
+            authorization
+            autoincrement
+            band
+            begin
+            between
+            binary
+            bit
+            bit_length
+            bnot
+            bor
+            both
+            bxor
+            by
+            byte
+            cascade
+            cascaded
+            case
+            cast
+            catalog
+            char
+            character
+            char_length
+            character_length
+            check
+            close
+            coalesce
+            collate
+            collation
+            column
+            commit
+            comp
+            compression
+            connect
+            connection
+            constraint
+            constraints
+            container
+            continue
+            convert
+            corresponding
+            counter
+            cr [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MSSQLSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to avg
+            AVG
+            AVG(%CURSOR%)
+            AVG ( [ ALL | DISTINCT ] expression )\nReturns the average of the values in a group.
+            checksum_agg
+            CHECKSUM_AGG
+            CHECKSUM_AGG(%CURSOR%)
+            CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )\nReturns the checksum of the values in a group.
+            count
+            COUNT
+            COUNT(%CURSOR%)
+            COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )\nReturns the number of items in a group.
+            count_big
+            COUNT_BIG
+            COUNT_BIG(%CURSOR%)
+            COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )\nReturns the number of items in a [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MSSQLSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to add
+            all
+            alter
+            and
+            any
+            as
+            asc
+            authorization
+            backup
+            begin
+            between
+            break
+            browse
+            bulk
+            by
+            cascade
+            case
+            check
+            checkpoint
+            close
+            clustered
+            collate
+            column
+            commit
+            compute
+            constraint
+            contains
+            continue
+            create
+            cross
+            current
+            current_date
+            current_time
+            cursor
+            database
+            dbcc
+            deallocate
+            declare
+            default
+            delete
+            deny
+            desc
+            disk
+            distinct
+            distributed
+            double
+            drop
+            dump
+            else
+            end
+            errlvl
+            escape
+            except
+            exec
+            execute
+            exists
+            exit
+            external
+            fetch
+            file
+            fillfactor
+            for
+            foreign
+            freete [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MySQLSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to abs
+            ABS
+            ABS(%CURSOR%)
+            ABS(X)\nReturns the absolute value of X.
+            acos
+            ACOS
+            ACOS(%CURSOR%)
+            ACOS(X)\nReturns the arc cosine of X, that is, the value whose cosine is X. Returns NULL if X is not in the range -1 to 1.
+            adddate
+            ADDDATE
+            ADDDATE(%CURSOR%)
+            ADDDATE(date, INTERVAL expr unit)\nADDDATE(expr, days)\nWhen invoked with the INTERVAL form of the second argument, ADDDATE() is a synonym for DATE_ADD(). The related function SUBDATE() is a synonym for DATE_SUB().
+            addtime
+            ADDTIME
+            ADDTIME(%CURSOR%)
+            ADD [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.MySQLSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            group_concat
+            min
+            max
+            sum
+            bit_and
+            bit_or
+            bit_xor
+            std
+            stddev
+            stddev_pop
+            stddev_samp
+            var_pop
+            var_samp
+            variance
+            count
+            add
+            all
+            alter
+            analyze
+            and
+            as
+            asc
+            asensitive
+            before
+            between
+            bigint
+            binary
+            blob
+            both
+            by
+            call
+            cascade
+            case
+            change
+            char
+            character
+            check
+            collate
+            column
+            condition
+            constraint
+            continue
+            convert
+            create
+            cross
+            current_date
+            current_time
+            current_timestamp
+            current_user
+            cursor
+            database
+            databases
+            day_hour
+            day_microsecond
+            day_minute
+            day_second
+            dec
+            deci [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.OracleSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to abs
+            ABS
+            ABS(%CURSOR%)
+            ABS(n)\nReturns the absolute value of n.
+            acos
+            ACOS
+            ACOS(%CURSOR%)
+            ACOS(n)\nReturns the arc cosine of n. The argument n must be in the range of -1 to 1, and the function returns a value in the range of 0 to pi, expressed in radians.
+            asin
+            ASIN
+            ASIN(%CURSOR%)
+            ASIN(n)\nReturns the arc sine of n. The argument n must be in the range of -1 to 1, and the function returns a value in the range of -pi/2 to pi/2, expressed in radians.
+            atan
+            ATAN
+            ATAN(%CURSOR%)
+            ATAN(n)\nReturns the ar [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.OracleSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            sum
+            count
+            max
+            min
+            stdev
+            stdevp
+            var
+            varp
+            access
+            add
+            all
+            alter
+            and
+            any
+            as
+            asc
+            audit
+            between
+            by
+            char
+            check
+            cluster
+            column
+            comment
+            compress
+            connect
+            create
+            current
+            date
+            decimal
+            default
+            delete
+            desc
+            distinct
+            drop
+            else
+            exclusive
+            exists
+            file
+            float
+            for
+            from
+            grant
+            group
+            having
+            identified
+            immediate
+            in
+            increment
+            index
+            initial
+            insert
+            integer
+            intersect
+            into
+            is
+            level
+            like
+            lock
+            long
+            maxextents
+            minus
+            mlslabel
+            mode
+            modify
+            noaudit
+            nocompress
+            not
+            nowait
+            n [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.paste">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.PostgreSQLSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to abs
+            abs
+            abs(%CURSOR%)
+            abs(x)\nAbsolute value.
+            cbrt
+            cbrt
+            cbrt(%CURSOR%)
+            cbrt(dp)\nCube root.
+            ceil
+            ceil
+            ceil(%CURSOR%)
+            ceil(dp or numeric)\nSmallest integer not less than argument.
+            ceiling
+            ceiling
+            ceiling(%CURSOR%)
+            ceiling(dp or numeric)\nSmallest integer not less than argument (alias for ceil).
+            degrees
+            degrees
+            degrees(%CURSOR%)
+            degrees(dp)\nRadians to degrees.
+            div
+            div
+            div(%CURSOR%)
+            div(y numeric, x numeric)\nInteger quotient of y/x.
+            exp
+            exp
+            exp(%CURSOR%)
+            exp(dp or numeric)\nExponen [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.PostgreSQLSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to notnull
+            isnull
+            is
+            avg
+            min
+            max
+            sum
+            count
+            like
+            between
+            in
+            limit
+            offset
+            order
+            by
+            asc
+            desc
+            nulls
+            first
+            last
+            union
+            except
+            intersect
+            all
+            where
+            having
+            into
+            temporary
+            temp
+            table
+            select
+            distinct
+            group
+            as
+            from
+            cross
+            join
+            inner
+            left
+            right
+            full
+            outer
+            on
+            or
+            and
+            not
+            ilike
+            similar
+            to
+            escape
+            overlaps
+            true
+            false
+            null
+            unknown
+            some
+            any
+            exists
+            char_length
+            character_length
+            octet_length
+            bit_length
+            extract
+            timezone_hour
+            timezone_minute
+            second
+            year
+            month
+            day
+            hour [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.procedure">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.QueryBuilder">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.redo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.schema">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.splitter_bg">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.splitter_handle_hot_left">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.splitter_handle_hot_right">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.splitter_handle_left">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.splitter_handle_right">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQL2003SyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to grouping
+            GROUPING
+            GROUPING(%CURSOR%)
+            GROUPING( column_reference )\nIndicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set.
+            rank
+            RANK
+            RANK(%CURSOR%)
+            RANK(...)
+            dense_rank
+            DENSE_RANK
+            DENSE_RANK(%CURSOR%)
+            DENSE_RANK(...)
+            percent_rank
+            PERCENT_RANK
+            PERCENT_RANK(%CURSOR%)
+            PERCENT_RANK(...)
+            cume_dist
+            CUME_DIST
+            CUME_DIST(%CURSOR%)
+            CUME_DIST(...)
+            row_number
+            ROW_NUMBER
+            ROW_NUMBER(%CURSOR% [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQL2003SyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to abs
+            all
+            allocate
+            alter
+            and
+            any
+            are
+            array
+            as
+            asensitive
+            asymmetric
+            at
+            atomic
+            authorization
+            avg
+            begin
+            between
+            bigint
+            binary
+            blob
+            boolean
+            both
+            by
+            call
+            called
+            cardinality
+            cascaded
+            case
+            cast
+            ceil
+            ceiling
+            char
+            char_length
+            character
+            character_length
+            check
+            clob
+            close
+            coalesce
+            collate
+            collect
+            column
+            commit
+            condition
+            connect
+            constraint
+            convert
+            corr
+            corresponding
+            count
+            covar_pop
+            covar_samp
+            create
+            cross
+            cube
+            cume_dist
+            current
+            current_date
+            current_default_transfo [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQL92SyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to avg
+            AVG
+            AVG(%CURSOR%)
+            AVG ( [ ALL | DISTINCT ] expression )\nReturns the average of the values in a group.
+            max
+            MAX
+            MAX(%CURSOR%)
+            MAX ( [ ALL | DISTINCT ] expression )\nReturns the maximum value in a group.
+            min
+            MIN
+            MIN(%CURSOR%)
+            MIN ( [ ALL | DISTINCT ] expression )\nReturns the minimum value in a group.
+            sum
+            SUM
+            SUM(%CURSOR%)
+            SUM ( [ ALL | DISTINCT ] expression )\nReturns the sum of all the values.
+            count
+            COUNT
+            COUNT(%CURSOR%)
+            COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )\nReturns the [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQL92SyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            min
+            max
+            sum
+            count
+            absolute
+            action
+            add
+            all
+            allocate
+            alter
+            and
+            any
+            are
+            as
+            asc
+            assertion
+            at
+            authorization
+            begin
+            between
+            bit
+            bit_length
+            both
+            by
+            cascade
+            cascaded
+            case
+            cast
+            catalog
+            char
+            character
+            char_length
+            character_length
+            check
+            close
+            coalesce
+            collate
+            collation
+            column
+            commit
+            connect
+            connection
+            constraint
+            constraints
+            continue
+            convert
+            corresponding
+            create
+            cross
+            current
+            current_date
+            current_time
+            current_timestamp
+            current_user
+            cursor
+            date
+            day
+            deallocate
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQLiteSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to avg
+            avg
+            avg(%CURSOR%)
+            avg(X)\nReturns the average value of all non-NULL X within a group. String and BLOB values that do not look like numbers are interpreted as 0. The result of avg() is always a floating point value as long as at there is at least one non-NULL input even if all inputs are integers. The result of avg() is NULL if and only if there are no non-NULL inputs.
+            count
+            count
+            count(%CURSOR%)
+            count(X)\ncount(*)\nThe first form return a count of the number of times that X is not NULL in a group [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SQLiteSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            min
+            max
+            sum
+            count
+            like
+            between
+            in
+            order
+            by
+            collate
+            asc
+            desc
+            limit
+            offset
+            union
+            all
+            except
+            intersect
+            where
+            having
+            select
+            distinct
+            group
+            as
+            from
+            cross
+            join
+            inner
+            left
+            right
+            full
+            outer
+            on
+            or
+            and
+            not
+            is
+            null
+            glob
+            regexp
+            escape
+            notnull
+            isnull
+            exists
+            case
+            when
+            then
+            else
+            end
+            bigint
+            int8
+            bigserial
+            serial8
+            int
+            int4
+            integer
+            bool
+            boolean
+            box
+            bytea
+            cidr
+            circle
+            date
+            double
+            precision
+            float8
+            inet
+            line
+            lseg
+            macaddr
+            money
+            path
+            point
+            polygon
+            real
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SybaseSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to abs
+            ABS
+            ABS(%CURSOR%)
+            ABS( numeric-expression )\nReturns the absolute value of a numeric expression.
+            acos
+            ACOS
+            ACOS(%CURSOR%)
+            ACOS( numeric-expression )\nReturns the arc-cosine, in radians, of a numeric expression.
+            argn
+            ARGN
+            ARGN(%CURSOR%)
+            ARGN( integer-expression, expression [ , ...] )\nReturns a selected argument from a list of arguments.
+            ascii
+            ASCII
+            ASCII(%CURSOR%)
+            ASCII( string-expression )\nReturns the integer ASCII value of the first byte in a string-expression.
+            asin
+            ASIN
+            ASIN(%CURSO [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.SybaseSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to avg
+            sum
+            count
+            count_big
+            max
+            min
+            like
+            between
+            in
+            with
+            as
+            order
+            by
+            asc
+            desc
+            union
+            all
+            except
+            intersect
+            where
+            having
+            select
+            distinct
+            first
+            top
+            starting
+            at
+            group
+            option
+            hash
+            join
+            concat
+            merge
+            loop
+            fast
+            force
+            maxdop
+            robust
+            plan
+            keep
+            keepfixed
+            expand
+            views
+            for
+            browse
+            xml
+            raw
+            auto
+            explicit
+            xmldata
+            elements
+            binary
+            base64
+            or
+            and
+            not
+            true
+            false
+            is
+            null
+            unknown
+            escape
+            exists
+            some
+            any
+            bigint
+            int
+            integer
+            smallint
+            tinyint
+            bit
+            real
+            money
+            smallmoney
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.synonym">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.table">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.template">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.undo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.view">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.VistaDBSyntaxProvider_Functions">
+             <summary>
+               Looks up a localized string similar to ascii
+            ASCII
+            ASCII(%CURSOR%)
+            ASCII(char)\nReturns the ASCII code of the first character in the expression.
+            lower
+            LOWER
+            LOWER(%CURSOR%)
+            LOWER(string)\nReturns the lower case of the string in the expression.
+            unicode
+            UNICODE
+            UNICODE(%CURSOR%)
+            UNICODE(&apos;ncharacter_expression&apos;)\nReturns the integer value, as defined by the Unicode standard, for the first character of the input expression.
+            upper
+            UPPER
+            UPPER(%CURSOR%)
+            UPPER(string)\nReturns the upper case of the string in the expression.
+            char
+            CHAR
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.Properties.Resources.VistaDBSyntaxProvider_Keywords">
+             <summary>
+               Looks up a localized string similar to add
+            all
+            alter
+            and
+            any
+            as
+            asc
+            authorization
+            backup
+            begin
+            between
+            break
+            browse
+            bulk
+            by
+            cascade
+            case
+            check
+            checkpoint
+            close
+            clustered
+            coalesce
+            collate
+            column
+            commit
+            compute
+            constraint
+            contains
+            containstable
+            continue
+            convert
+            create
+            cross
+            current
+            current_date
+            current_time
+            current_timestamp
+            current_user
+            cursor
+            database
+            datetime2
+            datetimeoffset
+            dbcc
+            deallocate
+            declare
+            default
+            delete
+            deny
+            desc
+            disk
+            distinct
+            distributed
+            double
+            drop
+            dump
+            else
+            end
+            errlvl
+            escape
+            except
+            exec
+            execute
+            exists
+            exit
+            external
+            fetch
+            fil [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLine.#ctor(ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextDocument,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLine"/> class.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="offset">The offset.</param>
+            <param name="fullLength">The full line length including the line terminator.</param>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLine.Offset">
+            <summary>
+            Offset from text start.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLine.Length">
+            <summary>
+            Line length without the terminator.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLine.FullLength">
+            <summary>
+            Full line length including the terminator.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLocation.IsEmpty">
+            <summary>
+            Determines whether this instance is empty (line and column less or equal 0).
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLocation.Line">
+            <summary>
+            Line index.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextLocation.Column">
+            <summary>
+            Column index.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.TextWord.Start">
+            <summary>
+            Gets or sets the offset from the line start.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualLine.Offset">
+            <summary>
+            Offset from start of the document text.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualLine.Length">
+            <summary>
+            Visual line length without the possible terminator.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualLine.FullLength">
+            <summary>
+            Full line length including the terminator (if it exists).
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualLine.End">
+            <summary>
+            Index of last visible character of the line (not line terminator).
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualWord.TextWord">
+            <summary>
+            The underlying TextWord.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualWord.Width">
+            <summary>
+            Gets or sets the width of the word in pixels.
+            </summary>
+        </member>
+        <member name="P:ActiveDatabaseSoftware.ExpressionEditor.TextEditorControl.VisualWord.Start">
+            <summary>
+            Gets or sets the offset from the visual line start.
+            </summary>
+        </member>
+    </members>
+</doc>

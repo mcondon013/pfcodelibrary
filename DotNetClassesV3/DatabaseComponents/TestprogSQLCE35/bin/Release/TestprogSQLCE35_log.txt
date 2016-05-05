@@ -1,0 +1,103 @@
+--------------------------------------------------
+Error:
+3/27/2013 4:20:26 PM
+--------------------------------------------------
+Source: System.Data: 
+Cannot find column 2.
+
+--------------------------------------------------
+Error:
+4/9/2013 5:49:23 PM
+--------------------------------------------------
+Source: mscorlib: 
+The process cannot access the file 'c:\temp\test01_35.sdf' because it is being used by another process.
+
+--------------------------------------------------
+Error:
+4/9/2013 5:51:01 PM
+--------------------------------------------------
+Source: mscorlib: 
+The process cannot access the file 'c:\temp\AppSettings_35.sdf' because it is being used by another process.
+
+--------------------------------------------------
+Error:
+5/26/2013 10:42:45 AM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+
+--------------------------------------------------
+Error:
+6/11/2013 5:31:27 PM
+--------------------------------------------------
+Source: TestprogSQLCE35: 
+C:\Testfiles\newdb35.sdf does not exist.
+
+
+--------------------------------------------------
+Error:
+6/11/2013 5:31:50 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+@p16 : Object must implement IConvertible.
+
+--------------------------------------------------
+Error:
+6/11/2013 5:32:22 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+@p16 : Object must implement IConvertible.
+
+--------------------------------------------------
+Error:
+6/11/2013 5:37:23 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+@p16 : Object must implement IConvertible.
+
+--------------------------------------------------
+Error:
+6/11/2013 5:39:49 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+@p16 : Object must implement IConvertible.
+
+--------------------------------------------------
+Error:
+6/11/2013 5:41:48 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: SQL Server Compact ADO.NET Data Provider: 
+Length, precision or scale cannot be specified for NTEXT or IMAGE data types. Remove these attributes from the IMAGE or NTEXT data types in the DLL statement.
+
+--------------------------------------------------
+Error:
+6/12/2013 7:03:55 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+@p1 : Unable to cast object of type 'System.Char[]' to type 'System.Byte[]'.
+
+--------------------------------------------------
+Error:
+6/12/2013 7:33:10 PM
+--------------------------------------------------
+Source: PFUnitTestDataObjects: 
+Error while trying to create table from DataTable object TestTabX1: Source: System.Data: 
+The DefaultValue for column F8A is of type System.Char[] and cannot be converted to System.Byte[].
+
+Inner Exception:
+Source: mscorlib: 
+Object must implement IConvertible.
+
+--------------------------------------------------
+Error:
+10/15/2013 4:21:53 PM
+--------------------------------------------------
+Source: SQL Server Compact ADO.NET Data Provider: 
+The specified table does not exist. [ USFirstNamesTest ]
+

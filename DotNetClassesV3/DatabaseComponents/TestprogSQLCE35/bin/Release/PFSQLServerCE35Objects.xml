@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFSQLServerCE35Objects</name>
+    </assembly>
+    <members>
+        <member name="T:PFSQLServerCE35Objects.PFSQLServerCE35">
+            <summary>
+            Class to manage access to SQL Server CE 3.5 databases.
+            </summary>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetEncryptionMode(System.String)">
+            <summary>
+            Convert string description into a valid SQLCE35EncryptionMode value.
+            </summary>
+            <param name="encMode">String name of encryption mode.</param>
+            <returns>SQLCE35EncryptionMode value.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetEncryptionModeDescription(PFDataAccessObjects.SQLCE35EncryptionMode)">
+            <summary>
+            Converts SQLCE35EncryptionMode value to a string name.
+            </summary>
+            <param name="encMode">Encryption mode to convert.</param>
+            <returns>String containing text description of the encryption mode.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.#ctor(System.String)">
+            <summary>
+            Contructor.
+            </summary>
+            <param name="databasePath">Path to database that will be represented by this instance.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="databasePath">Path to database that will be represented by this instance.</param>
+            <param name="databasePassword">Password required to open the database file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetConnectionStringKeyVals">
+            <summary>
+            Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetSqlCeEngine(System.String)">
+            <summary>
+            Creates a SQLCE library object.
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateDatabase(System.String,System.String)">
+            <summary>
+            Creates a new SQLCE 3.5 .sdf database file by copying a template .sdf file.
+            </summary>
+            <param name="databasePath">Full path to database file to be created.</param>
+            <param name="pathToTemplateDatabase">Full path to the database file that will be the template to be copied to the new file name.</param>
+            <returns>True if database is created. Otherwise false.</returns>
+            <remarks>Database inherits encryption settings from the template database. The default template database is unencrypted.</remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateDatabase(System.String)">
+            <summary>
+            Creates a SQLCE database file.
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateTable(System.Data.DataTable)">
+            <summary>
+            Method creates a a table in the database based on the column definitions and table name contained in the DataTable parameter.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <returns>True if table created; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateTable(System.Data.DataTable,System.String@)">
+            <summary>
+            Method creates a a table in the database based on the column definitions and table name contained in the DataTable parameter.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="createScript">Copy of the script used to create the table.</param>
+            <returns>True if table created; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.BuildTableCreateStatement(System.Data.DataTable)">
+            <summary>
+            Builds a SQL table create statement using the properties on the specified data table.
+            </summary>
+            <param name="dt">Object containing the table definition.</param>
+            <returns>String containing a SQL table create statement.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.TypeIsUserTable(System.Data.DataRow)">
+            <summary>
+            Function to determine if the type of table object is a user (base) table. This function is used to eliminate system tables from the output.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema.</param>
+            <returns>True if the table is a user or base table.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetFullTableName(System.Data.DataRow)">
+            <summary>
+            Function to build a qualified table name. Ususally this means attaching schema name in front of table name. In some cases both the catalog name and the schema name will be prepended to the table namne.
+             Result depends on the requirements of the database platform implementing this function.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema that contains Tables information.</param>
+            <returns>Full table name in either schemaname.tablename or catalogname.schemaname.tablename format.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetTableNameQualifiers(System.Data.DataRow)">
+            <summary>
+            Function to return the catalog, schema and name parts of a fully qualified table name. Some databases will only return the schema and name since catalog is not used by those database engines.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema that contains Tables information.</param>
+            <returns>Object containing the different qualifiers in the table name.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RebuildFullTableName(PFDataAccessObjects.PFTableDef,System.String)">
+            <summary>
+            Routine to recreate with a different schema name. Used when transferring a table definition to a new database.
+            </summary>
+            <param name="tabDef">Object containing the table definition to be reformatted.</param>
+            <param name="newSchemaName">Schema name to apply to the reformatted table name. NOTE: NewSchemaName, if any, will not be applied. UltraLite database does not use schema names.</param>
+            <returns>Table name. Schema name is ignored by the UltraLite class.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.TableExists(PFDataAccessObjects.PFTableDef)">
+            <summary>
+            Routine uses table name information supplied by a PFTableDef object to determine if a table exists in the database.
+            </summary>
+            <param name="td">Object containing table definition information.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.DropTable(PFDataAccessObjects.PFTableDef)">
+            <summary>
+            Routine retrieves table name information supplied by a PFTableDef object to drop (delete) a table in the database.
+            </summary>
+            <param name="td">Object containing table definition information.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.TableExists(System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.TableExists(System.String,System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.TableExists(System.String,System.String,System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="catalogName">Name of database. This parameter is ignored and only schema and table name is used for the existence check.</param>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.DropTable(System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.DropTable(System.String,System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.DropTable(System.String,System.String,System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="catalogName">Catalog name is ignored by this version of method.</param>
+            <param name="schemaName">Schema or owner name for the table.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.OpenConnection">
+            <summary>
+            Establishes connection to database.
+            </summary>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CloseConnection">
+            <summary>
+            Closes database connection.
+            </summary>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunNonQuery">
+            <summary>
+            Runs a non-query (e.g. update, insert, delete statements).
+            </summary>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunNonQuery(System.String,System.Data.CommandType)">
+            <summary>
+            Runs a non-query (e.g. update, insert, delete statements) using the query specified in the parameters.
+            </summary>
+            <param name="sqlText">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunNonQuery(System.String)">
+            <summary>
+            Runs a non-query SQL statement.
+            </summary>
+            <param name="query">SQL statement.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataReader">
+            <summary>
+            Runs query specified via properties.
+            </summary>
+            <returns>Data reader object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataReader(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Data reader object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataReader(System.String)">
+            <summary>
+            Runs query that returns results in DbDataReader format.
+            </summary>
+            <param name="query">SQL statement.</param>
+            <returns>Result rows.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryResultset(System.String)">
+            <summary>
+            Runs query that returns results in SqlCeResultSet format.
+            </summary>
+            <param name="query">SQL statement.</param>
+            <returns>Result rows.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataTable">
+            <summary>
+            Runs query.
+            </summary>
+            <returns>Returns dataset object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataTable(System.String,System.String)">
+            <summary>
+            Runs query that returns results in ADO.NET datatable format.
+            </summary>
+            <param name="query">SQL statement.</param>
+            <param name="queryName">Used to identify results in dataset.</param>
+            <returns>ADO.NET datatable containing result rows.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetQueryDataSchema">
+            <summary>
+            Retrieves the data schema represented by the query text provided to this instance of the class.
+            </summary>
+            <returns>Returns data table object that contains schema for the query defined for this instance.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetQueryDataSchema(System.String,System.Data.CommandType)">
+            <summary>
+            Retrieves the data schema represented by the query text provided to this routine.
+            </summary>
+            <param name="sqlQuery">SQL to parse.</param>
+            <param name="pCommandType">Type of command represented by the query: text or stored procedure.</param>
+            <returns>DataTable object containing the schema information for the columns that would be returned by this query.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataSet">
+            <summary>
+            Runs query.
+            </summary>
+            <returns>Returns dataset object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Dataset object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.RunQueryDataset(System.String,System.String)">
+            <summary>
+            Runs query that returns results in ADO.NET dataset format.
+            </summary>
+            <param name="query">SQL statement.</param>
+            <param name="queryName">Used to identify results in dataset.</param>
+            <returns>ADO.NET dataset containing result rows.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ConvertDataReaderToDataTable(System.Data.Common.DbDataReader)">
+            <summary>
+            Transforms a DbDataReader object into a DataTable object.
+            </summary>
+            <param name="rdr">DbDataReader object.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ConvertDataReaderToDataTable(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Transforms a DbDataReader object into a DataTable object.
+            </summary>
+            <param name="rdr">DbDataReader object.</param>
+            <param name="tableName">Name that identifies the table.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ConvertResultSetToDataTable(System.Data.SqlServerCe.SqlCeResultSet)">
+            <summary>
+            Transforms a SqlCeResultSet object into a DataTable object.
+            </summary>
+            <param name="res">SqlCeResultSet object.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ConvertResultSetToDataTable(System.Data.SqlServerCe.SqlCeResultSet,System.String)">
+            <summary>
+            Transforms a SqlCeResultSet object into a DataTable object.
+            </summary>
+            <param name="res">SqlCeResultSet object.</param>
+            <param name="tableName">Name that identifies the table.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ProcessDataReader(System.Data.Common.DbDataReader)">
+            <summary>
+            Returns data from a DbDataReader object to the caller.
+            </summary>
+            <param name="rdr">DbDataReader object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ProcessResultSet(System.Data.SqlServerCe.SqlCeResultSet)">
+            <summary>
+            Returns data from a SqlCeResultSet object to the caller.
+            </summary>
+            <param name="res">SqlCeResultSet object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ProcessDataSet(System.Data.DataSet)">
+            <summary>
+            Returns data from a DataSet to the caller.
+            </summary>
+            <param name="ds">DataSet object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ProcessDataTable(System.Data.DataTable)">
+            <summary>
+            Returns data from a DataTable to the caller.
+            </summary>
+            <param name="tab">DataTable object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ProcessDataTable(System.Data.DataTable,System.Int32)">
+            <summary>
+            Returns data from a DataTable to the caller.
+            </summary>
+            <param name="tab">DataTable object containing data to be returned to the caller.</param>
+            <param name="tableNumber">Arbitrary number used for identifying multiple DataTables.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractDelimitedDataFromDataReader(System.Data.Common.DbDataReader,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="rdr">Data reader object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractDelimitedDataFromResultSet(System.Data.SqlServerCe.SqlCeResultSet,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="res">SqlCeResultSet object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractDelimitedDataFromDataSet(System.Data.DataSet,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractDelimitedDataFromTable(System.Data.DataTable,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="tab">DataTable object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractFixedLengthDataFromDataReader(System.Data.Common.DbDataReader,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="rdr">Data reader object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractFixedLengthDataFromResultSet(System.Data.SqlServerCe.SqlCeResultSet,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="res">SqlCeResultSet object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractFixedLengthDataFromDataSet(System.Data.DataSet,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ExtractFixedLengthDataFromTable(System.Data.DataTable,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="tab">DataTable object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ImportDataFromDataTable(System.Data.DataTable)">
+            <summary>
+            Loads rows contained in an ADO.NET data table to an MSOracle database table. Table must already exist. See CreateTable methods to create a new table.
+            </summary>
+            <param name="dt">DataTable object containing data to load.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ImportDataFromDataTable(System.Data.DataTable,System.Int32)">
+            <summary>
+            Loads rows contained in an ADO.NET data table to an MSOracle database table. Table must already exist. See CreateTable methods to create a new table.
+            </summary>
+            <param name="dt">DataTable object containing data to load.</param>
+            <param name="updateBatchSize">Number of individual SQL modification statements to include in a table modification operation. WARNING: This parameter is ignored and UpdateBatchSize is always set to 1 for this class.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.LoadXmlFileToDataTable(System.String)">
+            <summary>
+            Reads contents of xml file into a DataTable
+            </summary>
+            <param name="filePath">Location of Xml file.</param>
+            <returns>DataTable with data.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.LoadXmlFileToDataSet(System.String)">
+            <summary>
+            Reads contents of xml file into a DataSet
+            </summary>
+            <param name="filePath">Location of Xml file.</param>
+            <returns>DataSet with data.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataReaderToXmlFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes contents of DataReader in Xml format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataReaderWithSchemaToXmlFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes contents of DataReader plus the data schema in Xml format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataReaderToXmlSchemaFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes data schema in Xsd format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveResultSetToXmlFile(System.Data.SqlServerCe.SqlCeResultSet,System.String)">
+            <summary>
+            Writes contents of ResultSet in Xml format to specified output file.
+            </summary>
+            <param name="res">ResultSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveResultSetWithSchemaToXmlFile(System.Data.SqlServerCe.SqlCeResultSet,System.String)">
+            <summary>
+            Writes contents of ResultSet plus the data schema in Xml format to specified output file.
+            </summary>
+            <param name="res">ResultSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveResultSetToXmlSchemaFile(System.Data.SqlServerCe.SqlCeResultSet,System.String)">
+            <summary>
+            Writes ResultSet in Xsd format to specified output file.
+            </summary>
+            <param name="res">ResultSet object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataTableToXmlFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes contents of DataTable in Xml format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataTableWithSchemaToXmlFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes both the contents of DataTable and the associated data schema in Xml format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataTableToXmlSchemaFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes the data schema in Xsd format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataSetToXmlFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes contents of DataSet in Xml format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataSetWithSchemaToXmlFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes both the contents of DataSet and the assoicated data schema in Xml format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.SaveDataSetToXmlSchemaFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes data schema of DataSet in Xsd format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetTableList">
+            <summary>
+            Retrieves list of tables and their associated schema information contained in the database pointed to by the current connection.
+            </summary>
+            <returns>Object containing the list of table definitions.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetTableList(System.String[],System.String[])">
+            <summary>
+            Retrieves list of tables and their associated schema information contained in the database pointed to by the current connection.
+            </summary>
+            <param name="includePatterns">Wildard pattern to use when selecting which tables to include. Specify * or null or empty string for pattern to include all tables.</param>
+            <param name="excludePatterns">Wildard pattern to use when selecting which tables to exclude. Specify * for pattern to exclude all tables. Specify null or empty string to exclude no tables.</param>
+            <returns>Object containing the list of table definitions.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.ConvertTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef},System.String)">
+            <summary>
+            Method to convert table definitions from another database format to the data format supported by this class.
+            </summary>
+            <param name="tableDefs">Object containing the list of table definitions to be converted.</param>
+            <param name="newSchemaName">Specify a new schema (owner) name for the tables when they are recreated in the database managed by the current instance.</param>
+            <returns>Object containing the list of table definitions after they have been converted to match the data formats of the current instance.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateTablesFromTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef})">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="tableDefs">Object containing list of table definitions.</param>
+            <returns>Number of tables created.</returns>
+            <remarks>Will not create table if table already exists.</remarks>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateTablesFromTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef},System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="tableDefs">Object containing list of table definitions.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CopyTableDataFromTableDefs(PFDataAccessObjects.PFDatabase,System.String,System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="sourceDatabase">Database containing source tables..</param>
+            <param name="newSchemaName">Schema to use for identifying the destination tables.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CopyTableDataFromTableDefs(PFDataAccessObjects.PFDatabase,System.String[],System.String[],System.String,System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="sourceDatabase">Database containing source tables..</param>
+            <param name="tableIncludePatterns">Wildard pattern to use when selecting which tables to include. Specify * or null or empty string for pattern to include all tables.</param>
+            <param name="tableExcludePatterns">Wildard pattern to use when selecting which tables to exclude. Specify * for pattern to exclude all tables. Specify null or empty string to exclude no tables.</param>
+            <param name="newSchemaName">Schema to use for identifying the destination tables.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.DbPlatform">
+            <summary>
+            Identifies the database platform supported by this class.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.Connection">
+            <summary>
+            ADO.NET connection object for this instance.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.Command">
+            <summary>
+            ADO.NET command object for this instance.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.CommandType">
+            <summary>
+            Type of command: text or stored procedure.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.CommandTimeout">
+            <summary>
+            Number of seconds to wait before a command is timed out.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.SQLQuery">
+            <summary>
+            SQL text to execute.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.DatabasePath">
+            <summary>
+            Path to database that will be represented by this instance.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.DatabasePassword">
+            <summary>
+            Password required to open the database file.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.EncryptionOn">
+            <summary>
+            If true, database is encrypted.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.EncryptionMode">
+            <summary>
+            Type of database encryption.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.MaxDatabaseSize">
+            <summary>
+            MaxDatabaseSize Property.
+            </summary>
+            <remarks>Specified in Megabytes. Default is 128.</remarks>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.MaxBufferSize">
+            <summary>
+            MaxBufferSize Property.
+            </summary>
+            <remarks>Specified in Kilobytes. Default is 640.</remarks>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.MaxTempFileSize">
+            <summary>
+            MaxTempFileSize Property.
+            </summary>
+            <remarks>Specified in Megabytes. Default is 128.</remarks>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.ConnectionString">
+            <summary>
+            Connection string to use when opening the database.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.ConnectionStringKeyVals">
+            <summary>
+            Returns list of all the keys and their values contained in the current connection string.
+            </summary>
+        </member>
+        <member name="P:PFSQLServerCE35Objects.PFSQLServerCE35.IsConnected">
+            <summary>
+            Returns true if the connection is open.
+            </summary>
+        </member>
+    </members>
+</doc>

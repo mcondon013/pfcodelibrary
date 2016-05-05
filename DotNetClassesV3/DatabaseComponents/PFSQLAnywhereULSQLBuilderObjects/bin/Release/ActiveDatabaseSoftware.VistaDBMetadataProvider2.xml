@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveDatabaseSoftware.VistaDBMetadataProvider2</name>
+    </assembly>
+    <members>
+        <member name="F:ActiveDatabaseSoftware.ActiveQueryBuilder.VistaDBConnectionEditForm.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.VistaDBConnectionEditForm.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.VistaDBConnectionEditForm.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ActiveDatabaseSoftware.ActiveQueryBuilder.VistaDBMetadataProvider">
+            <summary> Metadata Provider for VistaDB 3. </summary>
+            <seealso cref="!:VistaDB4MetadataProvider">VistaDB 4 Metadata Provider</seealso>
+        </member>
+    </members>
+</doc>

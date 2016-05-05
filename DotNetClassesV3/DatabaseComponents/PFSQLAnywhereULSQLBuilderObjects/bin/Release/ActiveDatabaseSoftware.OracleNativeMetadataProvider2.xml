@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveDatabaseSoftware.OracleNativeMetadataProvider2</name>
+    </assembly>
+    <members>
+        <member name="F:ActiveDatabaseSoftware.ActiveQueryBuilder.OracleNativeConnectionEditForm.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.OracleNativeConnectionEditForm.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ActiveDatabaseSoftware.ActiveQueryBuilder.OracleNativeConnectionEditForm.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ActiveDatabaseSoftware.ActiveQueryBuilder.OracleNativeMetadataProvider">
+            <summary> Metadata Provider for Oracle Database through Oracle.ManagedDataAccess.Client (Oracle). </summary>
+            <seealso cref="!:ActiveDatabaseSoftware.ActiveQueryBuilder.OracleMetadataProvider">Metadata Provider for Oracle Database through System.Data.OracleClient (Microsoft)</seealso>
+        </member>
+    </members>
+</doc>

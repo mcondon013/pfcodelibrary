@@ -1,0 +1,1 @@
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOracle\bin\Release\TestprogOracle.exe.config
