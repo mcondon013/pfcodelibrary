@@ -1,0 +1,1 @@
+C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\TestprogDocumentObjects\bin\Release\TestprogDocumentObjects.exe.config
