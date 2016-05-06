@@ -38,7 +38,7 @@
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="PFAppUtils">
       <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFAppUtils.dll</HintPath>
@@ -47,15 +47,15 @@
       <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFDataAccessObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFFileSystemObjects">
-      <HintPath>..\..\..\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\bin\Release\PFFileSystemObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFFileSystemObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFGlobalObjects, Version=3.0.4680.21393, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetClassesV3\WinAppComponents\PFGlobalObjects\bin\Release\PFGlobalObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFGlobalObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFMessageLogs, Version=3.0.4680.21393, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetClassesV3\WinAppComponents\PFMessageLogs\bin\Release\PFMessageLogs.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFMessageLogs.dll</HintPath>
     </Reference>
     <Reference Include="PFPrinterObjects">
       <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFPrinterObjects.dll</HintPath>
@@ -65,7 +65,7 @@
     </Reference>
     <Reference Include="PFSystemObjects, Version=3.0.4680.21394, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetClassesV3\WinAppComponents\PFSystemObjects\bin\Release\PFSystemObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFSystemObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFTextFile">
       <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFTextFile.dll</HintPath>
