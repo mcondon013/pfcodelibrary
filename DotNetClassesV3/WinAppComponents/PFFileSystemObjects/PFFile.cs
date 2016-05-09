@@ -77,7 +77,7 @@ namespace PFFileSystemObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name and value for all public properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing results.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();

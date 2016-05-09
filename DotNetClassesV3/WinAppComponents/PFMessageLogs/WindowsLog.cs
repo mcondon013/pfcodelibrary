@@ -309,7 +309,7 @@ namespace PFMessageLogs
         ///// <param name="logName">Name of log to which messages will be written. Usually is the Application log.</param>
         ///// <param name="machineName">Name of the machine on which the log resides. Specify . or localhost for local machine.</param>
         ///// <param name="eventSourceName">Name of the event source. Usually will be PFApps for ProFast applications.</param>
-        ///// <returns></returns>
+        ///// <returns>xxx</returns>
         //public static int RegisterEventSource(string logName, string machineName, string eventSourceName)
         //{
         //    StringBuilder msg = new StringBuilder();

@@ -465,7 +465,7 @@ namespace PFPrinterObjects
         /// Create standard log file name with "our" name format
         /// </summary>
         /// <param name="name"></param>
-        /// <returns></returns>
+        /// <returns>String containing log file name.</returns>
         private static String LogFileName(String name)
         {
             return String.Format("{0}_{1:yyyyMMdd}.Log", name, DateTime.Now);
@@ -475,11 +475,11 @@ namespace PFPrinterObjects
         /// Write the log entry to the file. Note that the log file is always flushed and closed. This
         /// will impact performance, but ensures that messages aren't lost
         /// </summary>
-        /// <param name="from"></param>
-        /// <param name="category"></param>
-        /// <param name="msg"></param>
-        /// <param name="path"></param>
-        /// <param name="name"></param>
+        /// <param name="from">Sender.</param>
+        /// <param name="category">Type of message.</param>
+        /// <param name="msg">Message text.</param>
+        /// <param name="path">Path to the logfile.</param>
+        /// <param name="name">Name of the logfile.</param>
         public static void Write(String from, LogManager.Categories category, String msg, String path, String name)
         {
             StringBuilder line = new StringBuilder();
@@ -1880,7 +1880,7 @@ namespace PFPrinterObjects
         /// <summary>
         /// calculate the print preview window width to show the entire page
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Width of window.</returns>
         private int PreviewDisplayWidth()
         {
             double displayWidth = printDoc.DefaultPageSettings.Bounds.Width
@@ -1891,7 +1891,7 @@ namespace PFPrinterObjects
         /// <summary>
         /// calculate the print preview window height to show the entire page
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Height of window.</returns>
         private int PreviewDisplayHeight()
         {
             double displayHeight = printDoc.DefaultPageSettings.Bounds.Height
@@ -1914,9 +1914,9 @@ namespace PFPrinterObjects
         /// Given a row and column, get the current grid cell style, including our local 
         /// overrides
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="col"></param>
-        /// <returns></returns>
+        /// <param name="row">Row object.</param>
+        /// <param name="col">Column object.</param>
+        /// <returns>Style value.</returns>
         protected DataGridViewCellStyle GetStyle(DataGridViewRow row, DataGridViewColumn col)
         {
             // set initial default
@@ -2095,7 +2095,7 @@ namespace PFPrinterObjects
         /// the equivalent must be done prior to calling either of the PrintNoDisplay
         /// or PrintPreviewNoDisplay methods.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Key pressed by user of dialog.</returns>
         public DialogResult DisplayPrintDialog()
         {
             if (EnableLogging) Logger.LogInfoMsg("DisplayPrintDialog process started");
@@ -2643,7 +2643,6 @@ namespace PFPrinterObjects
         /// <param name="linealignment">Override line alignment</param>
         /// <param name="flags">String format flags</param>
         /// <param name="trim">Override string trimming flags</param>
-        /// <returns></returns>
         private void buildstringformat(ref StringFormat format, DataGridViewCellStyle controlstyle,
             StringAlignment alignment, StringAlignment linealignment, StringFormatFlags flags,
             StringTrimming trim)
@@ -3669,9 +3668,9 @@ namespace PFPrinterObjects
         /// <summary>
         /// Print the page number
         /// </summary>
-        /// <param name="g"></param>
-        /// <param name="printpos"></param>
-        /// <returns></returns>
+        /// <param name="g">Graphics object.</param>
+        /// <param name="printpos">Print position.</param>
+        /// <returns>Print postion.</returns>
         private float PrintPageNo(Graphics g, float printpos)
         {
             if (pageno)
@@ -3910,7 +3909,7 @@ namespace PFPrinterObjects
         /// <param name="columnindex"></param>
         /// <param name="rectf"></param>
         /// <param name="style"></param>
-        /// <returns></returns>
+        /// <returns>True/False value.</returns>
         Boolean DrawOwnerDrawCell(Graphics g, int rowindex, int columnindex, RectangleF rectf,
             DataGridViewCellStyle style)
         {

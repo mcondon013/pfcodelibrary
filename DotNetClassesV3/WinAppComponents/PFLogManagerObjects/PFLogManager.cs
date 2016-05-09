@@ -354,7 +354,7 @@ namespace PFLogManagerObjects
         /// Used by unit test routines to fill up a retry queue with dummy messages.
         /// </summary>
         /// <param name="logMessage">Text of message to be logged.</param>
-        /// <returns></returns>
+        /// <returns>True if log write succeeded.</returns>
         public bool WriteMessageToLogRetryQueue(PFLogMessage logMessage)
         {
             bool logWriteSucceeded = false;
@@ -460,7 +460,7 @@ namespace PFLogManagerObjects
         /// <summary>
         /// Write a log message that was stored on the retry queue.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>True if log message rewrite successful.</returns>
         public int WriteLogMessagesOnRetryQueue()
         {
             bool writeSucceeded = false;
@@ -588,7 +588,7 @@ namespace PFLogManagerObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
@@ -605,7 +605,7 @@ namespace PFLogManagerObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -727,7 +727,7 @@ namespace PFLogManagerObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

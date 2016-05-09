@@ -55,7 +55,7 @@ namespace PFFileSystemObjects
         /// </summary>
         /// <param name="directoryPath">Path to directory to be sized.</param>
         /// <param name="includeSubfolders">True if you wish to include all subdirectories in the size calculation.</param>
-        /// <returns></returns>
+        /// <returns>Object containing directory size.</returns>
         public static DirSizeInfo GetDirectorySize(string directoryPath, bool includeSubfolders)
         {
             DirSizeInfo sizeInfo;

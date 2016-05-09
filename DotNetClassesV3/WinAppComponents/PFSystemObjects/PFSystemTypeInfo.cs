@@ -38,7 +38,7 @@ namespace PFSystemObjects
         /// Returns an object of the type specified by the full name string in the parameter.
         /// </summary>
         /// <param name="DataTypeName">Full name of the data type.</param>
-        /// <returns></returns>
+        /// <returns>System.Type value.</returns>
         public static System.Type ConvertNameToType(string DataTypeName)
         {
             return System.Type.GetType(DataTypeName);

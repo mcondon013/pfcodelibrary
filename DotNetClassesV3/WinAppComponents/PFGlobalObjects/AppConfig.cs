@@ -15,8 +15,8 @@ namespace AppGlobals
         /// <summary>
         /// Retrieves application configuration value for specified key.
         /// </summary>
-        /// <param name="psKey">Configuration key to search for.</param>
         /// <returns>String value if key found; otherwise an empty string is returned.</returns>
+        /// <param name="psKey">Configuration key to search for.</param>
         static public string GetConfigValue(string psKey)
         {
             string sConfigValue = string.Empty;

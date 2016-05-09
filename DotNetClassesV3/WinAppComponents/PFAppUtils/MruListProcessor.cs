@@ -412,7 +412,7 @@ namespace PFAppUtils
 		/// <para>This method expects fully resolved pathnames to be passed to it.
 		/// (Use Path.GetFullPath() to obtain this.)</para>
 		/// </remarks>
-		/// <returns></returns>
+		/// <returns>Shortened path name.</returns>
 		static public string ShortenPathname(string pathname, int maxLength)
 		{
 			if (pathname.Length <= maxLength)
@@ -574,7 +574,7 @@ namespace PFAppUtils
         /// GetFileAt routine.
         /// </summary>
         /// <param name="number">Parameter.</param>
-        /// <returns></returns>
+        /// <returns>Returns file name.</returns>
 		public string GetFileAt(int number)
 		{
 			if (number < 0 || number >= numEntries)
@@ -586,7 +586,7 @@ namespace PFAppUtils
         /// <summary>
         /// GetFiles routine.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns array of file names.</returns>
 		public string[] GetFiles()
 		{
 			string[] filenames = new string[numEntries];

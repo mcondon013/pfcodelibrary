@@ -58,7 +58,7 @@ namespace PFAppUtils
         /// </summary>
         /// <param name="element">Object to be dumped.</param>
         /// <param name="depth">Determines how deep any recursion of a complex cobject should go.</param>
-        /// <returns></returns>
+        /// <returns>String containing results.</returns>
         public static string Write(object element, int depth)
         {
             PFObjectDumper dumper = new PFObjectDumper(depth);

@@ -100,7 +100,7 @@ namespace PFSecurityObjects
         /// <summary>
         /// Attempts to impersonate the user identified in the Domain, Username and Password properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>True if impersonate succeeded.</returns>
 
         public bool Impersonate()
         {
@@ -210,7 +210,7 @@ namespace PFSecurityObjects
         /// <summary>
         /// Returns name of the current user.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing name.</returns>
         public static string CurrentUser()
         {
             return WindowsIdentity.GetCurrent().Name;
@@ -231,7 +231,7 @@ namespace PFSecurityObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
@@ -248,7 +248,7 @@ namespace PFSecurityObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -334,7 +334,7 @@ namespace PFSecurityObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing result.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

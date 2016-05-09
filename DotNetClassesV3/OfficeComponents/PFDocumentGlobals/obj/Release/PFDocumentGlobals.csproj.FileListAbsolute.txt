@@ -1,5 +1,0 @@
-C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\PFDocumentGlobals\bin\Release\PFDocumentGlobals.dll
-C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\PFDocumentGlobals\bin\Release\PFDocumentGlobals.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\PFDocumentGlobals\obj\Release\ResolveAssemblyReference.cache
-C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\PFDocumentGlobals\obj\Release\PFDocumentGlobals.dll
-C:\ProFast\CPLibs\DotNetClassesV3\OfficeComponents\PFDocumentGlobals\obj\Release\PFDocumentGlobals.pdb

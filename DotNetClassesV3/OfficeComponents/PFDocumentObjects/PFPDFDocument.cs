@@ -103,7 +103,7 @@ namespace PFDocumentObjects
         /// Writes data contained in XML string to path stored in DocumentFilePath property.
         /// </summary>
         /// <param name="xmlString">String containing valid XML formatted data.</param>
-        /// <returns></returns>
+        /// <returns>True if output operation is successful. False if write fails.</returns>
         public bool WriteDataToDocument(string xmlString)
         {
             bool success = true;
@@ -117,7 +117,7 @@ namespace PFDocumentObjects
         /// Writes data contained in XML document object to path stored in DocumentFilePath property.
         /// </summary>
         /// <param name="xmlDoc">XML formatted document object.</param>
-        /// <returns></returns>
+        /// <returns>True if output operation is successful. False if write fails.</returns>
         public bool WriteDataToDocument(XmlDocument xmlDoc)
         {
             bool success = true;
@@ -127,7 +127,7 @@ namespace PFDocumentObjects
         }
 
         /// <summary>
-        /// Writes data contained in ADO.NET DataTable object to path stored in DocumentFilePath property.
+        /// Writes data contained in ADO.NET DataTable object to path stored in DocumentFilePath property..
         /// </summary>
         /// <param name="dt">DataTable object containing data to be imported.</param>
         /// <returns>True if output operation is successful. False if write fails.</returns>

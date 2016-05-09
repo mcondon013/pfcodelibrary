@@ -75,17 +75,20 @@ namespace System.Windows.Forms
         private static extern bool SetWindowText(IntPtr hWnd, string lpString);
 
 
-#pragma warning disable 1591
+        /// <summary>
+        /// Defines message parameters passed to a WH_CALLWNDPROCRET hook procedure.
+        /// </summary>
         [StructLayout(LayoutKind.Sequential)]
 		public struct CWPRETSTRUCT
 		{
-			public IntPtr lResult;
+#pragma warning disable 1591
+            public IntPtr lResult;
 			public IntPtr lParam;
 			public IntPtr wParam;
 			public uint   message;
 			public IntPtr hwnd;
-		};
 #pragma warning restore 1591
+        };
 
 		private static HookProc hookProc;
         private static EnumChildProc enumProc;

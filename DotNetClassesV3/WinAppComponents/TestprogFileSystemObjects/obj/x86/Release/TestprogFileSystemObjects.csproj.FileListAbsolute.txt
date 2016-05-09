@@ -1,1 +1,0 @@
-C:\ProFast\CPLibs\DotNetClassesV3\WinAppComponents\TestprogFileSystemObjects\bin\Release\TestprogFileSystemObjects.exe.config

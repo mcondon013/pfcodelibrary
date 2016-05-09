@@ -108,21 +108,21 @@ namespace PFFileSystemObjects
         //methods
 
         /// <summary>
-        /// 
+        /// Adds a file name with the specified file name extension to the collection.
         /// </summary>
-        /// <param name="ext"></param>
-        /// <returns></returns>
+        /// <param name="ext">The file name extension for the auto-generated temporary file name to add to the collection. </param>
+        /// <returns>A file name with the specified extension that was just added to the collection.</returns>
         public string AddExtension(string ext)
         {
             return _tempFileCollection.AddExtension(ext);
         }
 
         /// <summary>
-        /// 
+        /// Adds a file name with the specified file name extension to the collection, using the specified value indicating whether the file should be deleted or retained.
         /// </summary>
-        /// <param name="ext"></param>
-        /// <param name="keepFile"></param>
-        /// <returns></returns>
+        /// <param name="ext">The file name extension for the auto-generated temporary file name to add to the collection. </param>
+        /// <param name="keepFile">True if the file should be kept after use; false if the file should be deleted. </param>
+        /// <returns>A file name with the specified extension that was just added to the collection.</returns>
         public string AddExtension(string ext, bool keepFile)
         {
             return _tempFileCollection.AddExtension(ext, keepFile);
