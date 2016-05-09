@@ -1,9 +1,0 @@
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.XML
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\ResolveAssemblyReference.cache
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\PFTextFileViewer.TextFileViewerForm.resources
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\GenerateResource.read.1.tlog
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\GenerateResource.write.1.tlog
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\PFTextFileViewer.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\PFTextFileViewer.pdb
