@@ -88,25 +88,24 @@
       <HintPath>..\..\..\..\..\Program Files\ActiveDBSoft\Active Query Builder 2 .NET Professional Edition\assemblies\ActiveDatabaseSoftware.UniversalMetadataProvider2.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PFDataAccessObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\PFDataAccessObjects.dll</HintPath>
+    <Reference Include="PFDataAccessObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFDataAccessObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFFileSystemObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\PFFileSystemObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFFileSystemObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFGlobalObjects, Version=3.0.5958.19865, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\PFGlobalObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFGlobalObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFSystemObjects, Version=3.0.5958.17731, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\PFSystemObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFSystemObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFTextObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\PFTextObjects.dll</HintPath>
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFTextObjects.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

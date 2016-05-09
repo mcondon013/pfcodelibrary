@@ -1,3 +1,4 @@
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.XML
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\bin\Release\PFTextFileViewer.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileViewer\obj\Release\ResolveAssemblyReference.cache

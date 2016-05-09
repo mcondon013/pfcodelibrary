@@ -500,7 +500,7 @@
             <summary>
             Routine overrides default ToString method and outputs name and value for all public properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFTextFiles.PFFixedLengthDataLine.ToXmlString">
             <summary>
@@ -928,7 +928,7 @@
             <summary>
             Returns a string containing the contents of the object in XML format.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="P:PFTextFiles.PFColDef.ColumnName">
             <summary>
@@ -1086,7 +1086,7 @@
             <summary>
             Returns a string containing the contents of the object in XML format.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="P:PFTextFiles.PFColDefExt.SourceColumnName">
             <summary>
@@ -1124,7 +1124,7 @@
             <summary>
             Returns a string containing the contents of the object in XML format.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="P:PFTextFiles.PFColData.Data">
             <summary>

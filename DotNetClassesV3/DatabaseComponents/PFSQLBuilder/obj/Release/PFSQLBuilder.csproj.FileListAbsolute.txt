@@ -1,3 +1,4 @@
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFSQLBuilder.XML
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFSQLBuilder.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFSQLBuilder.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFDataAccessObjects.dll
@@ -5,15 +6,15 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PF
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFCollectionsObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFTextFile.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFGlobalObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFEncryptionObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFRandomDataExt.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFGlobalObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFFileSystemObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFRandomData.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\obj\Release\PFSQLBuilder.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\obj\Release\PFSQLBuilder.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLBuilder\bin\Release\Ionic.Zip.dll

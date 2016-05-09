@@ -6,6 +6,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Relea
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFMessageLogs.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFCollectionsObjects.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFEncryptionObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\PFRandomDataExt.dll
@@ -19,4 +20,3 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\obj\Relea
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\obj\Release\GenerateResource.write.1.tlog
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\obj\Release\PFTextFile.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\obj\Release\PFTextFile.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFTextFileObjects\bin\Release\Ionic.Zip.dll

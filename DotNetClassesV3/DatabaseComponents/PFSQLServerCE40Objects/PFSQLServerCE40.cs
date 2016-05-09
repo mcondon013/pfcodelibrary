@@ -484,7 +484,7 @@ namespace PFSQLServerCE40Objects
         /// <summary>
         /// Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List in Key/Value format.</returns>
         private PFCollectionsObjects.PFKeyValueList<string, string> GetConnectionStringKeyVals()
         {
             SqlCeConnectionStringBuilder sqlConnBuilder = new SqlCeConnectionStringBuilder(this.ConnectionString);
@@ -533,7 +533,7 @@ namespace PFSQLServerCE40Objects
         /// Creates a SQLCE library object.
         /// </summary>
         /// <param name="connectionString"></param>
-        /// <returns></returns>
+        /// <returns>Object representing SQL CE 3.5 database engine.</returns>
         public SqlCeEngine GetSqlCeEngine(string connectionString)
         {
             SqlCeEngine engine = new SqlCeEngine(connectionString);
@@ -580,7 +580,7 @@ namespace PFSQLServerCE40Objects
         /// Creates a SQLCE database file.
         /// </summary>
         /// <param name="connectionString"></param>
-        /// <returns></returns>
+        /// <returns>True if database created.</returns>
         public bool CreateDatabase(string connectionString)
         {
             bool bSuccess = false;

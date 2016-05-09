@@ -1,3 +1,4 @@
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFSQLAnywhereObjects.XML
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFSQLAnywhereObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFSQLAnywhereObjects.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFCollectionsObjects.dll
@@ -13,6 +14,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Re
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFFileSystemObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFRandomData.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereObjects\obj\Release\PFSQLAnywhereObjects.dll

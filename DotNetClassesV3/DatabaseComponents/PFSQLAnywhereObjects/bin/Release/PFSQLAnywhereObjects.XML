@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFSQLAnywhereObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFSQLAnywhereObjects.PFSQLAnywhere">
+            <summary>
+            Class to manage .NET access to SQL Anywhere databases.
+            Requires SQLAnywhere client to be installed on the machine using this class. (e.g. iAnywhere.Data.SQLAnywhere.v4.0)
+            </summary>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="databaseFileName">Name of the SQL Anywhere database files that will be used.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateDatabase(System.String,System.String)">
+            <summary>
+            Creates a new SQL Anywhere .db database file by copying a template .db file.
+            </summary>
+            <param name="databasePath">Full path to database file to be created.</param>
+            <param name="pathToTemplateDatabase">Full path to the database file that will be the template to be copied to the new file name.</param>
+            <returns>True if database is created. Otherwise false.</returns>
+            <remarks>Database inherits encryption settings from the template database. The default template database is unencrypted.</remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateDatabase(System.String)">
+            <summary>
+            Creates a SQL Anywhere .db database file.
+            </summary>
+            <param name="databasePath">Full path to database file to be created.</param>
+            <returns>True if database is created. Otherwise false.</returns>
+            <remarks>Database is created without encryption.</remarks>
+            <remarks>You must have an open connection to an existing SQLAnywhere database in order to create the new database.</remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateDatabase(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a SQL Anywhere .db database file.
+            </summary>
+            <param name="databasePath">Full path to database file to be created.</param>
+            <param name="enableEncryption">If true, encryption will be enabled on the new database.</param>
+            <param name="encryptionKey">Encryption key for the database.</param>
+            <returns>True if database is created. Otherwise false.</returns>
+            <remarks>You must have an open connection to an existing SQLAnywhere database in order to create the new database.</remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateTable(System.Data.DataTable)">
+            <summary>
+            Method creates a a table in the database based on the column definitions and table name contained in the DataTable parameter.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <returns>True if table created; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateTable(System.Data.DataTable,System.String@)">
+            <summary>
+            Method creates a a table in the database based on the column definitions and table name contained in the DataTable parameter.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="createScript">Copy of the script used to create the table.</param>
+            <returns>True if table created; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.BuildTableCreateStatement(System.Data.DataTable)">
+            <summary>
+            Builds a SQL table create statement using the properties on the specified data table.
+            </summary>
+            <param name="dt">Object containing the table definition.</param>
+            <returns>String containing a SQL table create statement.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.TypeIsUserTable(System.Data.DataRow)">
+            <summary>
+            Function to determine if the type of table object is a user (base) table. This function is used to eliminate system tables from the output.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema.</param>
+            <returns>True if the table is a user or base table.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetFullTableName(System.Data.DataRow)">
+            <summary>
+            Function to build a qualified table name. Ususally this means attaching schema name in front of table name. In some cases both the catalog name and the schema name will be prepended to the table namne.
+             Result depends on the requirements of the database platform implementing this function.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema that contains Tables information.</param>
+            <returns>Full table name in either schemaname.tablename or catalogname.schemaname.tablename format.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetTableNameQualifiers(System.Data.DataRow)">
+            <summary>
+            Function to return the catalog, schema and name parts of a fully qualified table name. Some databases will only return the schema and name since catalog is not used by those database engines.
+            </summary>
+            <param name="dr">DataRow returned by GetSchema that contains Tables information.</param>
+            <returns>Object containing the different qualifiers in the table name.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RebuildFullTableName(PFDataAccessObjects.PFTableDef,System.String)">
+            <summary>
+            Routine to recreate with a different schema name. Used when transferring a table definition to a new database.
+            </summary>
+            <param name="tabDef">Object containing the table definition to be reformatted.</param>
+            <param name="newSchemaName">Schema name to apply to the reformatted table name.</param>
+            <returns>Table name that includes the new schema name.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.TableExists(PFDataAccessObjects.PFTableDef)">
+            <summary>
+            Routine uses table name information supplied by a PFTableDef object to determine if a table exists in the database.
+            </summary>
+            <param name="td">Object containing table definition information.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.DropTable(PFDataAccessObjects.PFTableDef)">
+            <summary>
+            Routine retrieves table name information supplied by a PFTableDef object to drop (delete) a table in the database.
+            </summary>
+            <param name="td">Object containing table definition information.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.TableExists(System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.TableExists(System.String,System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.TableExists(System.String,System.String,System.String)">
+            <summary>
+            Method to determine if a table exists in the database.
+            </summary>
+            <param name="catalogName">Name of database. This parameter is ignored and only schema and table name is used for the existence check.</param>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table exists; otherwise false.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.DropTable(System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+            <remarks>There could be unexpected results from this method because schema name is not specified.</remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.DropTable(System.String,System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="schemaName">Name of the schema to which the table belongs.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.DropTable(System.String,System.String,System.String)">
+            <summary>
+            Method to drop a table from the database.
+            </summary>
+            <param name="catalogName">Catalog name is ignored by this version of method.</param>
+            <param name="schemaName">Schema or owner name for the table.</param>
+            <param name="tableName">Name of the table.</param>
+            <returns>True if table no longer exists; otherwise returns false if table still exists.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.OpenConnection">
+            <summary>
+            Opens connection to database.
+            </summary>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CloseConnection">
+            <summary>
+            Closes connection to database.
+            </summary>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataReader">
+            <summary>
+            Runs query specified via properties.
+            </summary>
+            <returns>Data reader object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataReader(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Data reader object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataSet">
+            <summary>
+            Runs query.
+            </summary>
+            <returns>Returns dataset object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Dataset object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataTable">
+            <summary>
+            Runs query.
+            </summary>
+            <returns>Returns dataset object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunQueryDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            Runs query specified by the parameters.
+            </summary>
+            <param name="sqlQuery">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunNonQuery">
+            <summary>
+            Runs a non-query (e.g. update, insert, delete statements).
+            </summary>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.RunNonQuery(System.String,System.Data.CommandType)">
+            <summary>
+            Runs a non-query (e.g. update, insert, delete statements) using the query specified in the parameters.
+            </summary>
+            <param name="sqlText">SQL to execute.</param>
+            <param name="pCommandType">Type of command to run: text or stored procedure.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetQueryDataSchema">
+            <summary>
+            Retrieves the data schema represented by the query text provided to this instance of the class.
+            </summary>
+            <returns>Returns data table object that contains schema for the query defined for this instance.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetQueryDataSchema(System.String,System.Data.CommandType)">
+            <summary>
+            Retrieves the data schema represented by the query text provided to this routine.
+            </summary>
+            <param name="sqlQuery">SQL to parse.</param>
+            <param name="pCommandType">Type of command represented by the query: text or stored procedure.</param>
+            <returns>DataTable object containing the schema information for the columns that would be returned by this query.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetConnectionStringKeyVals">
+            <summary>
+            Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
+            </summary>
+            <returns>List in Key/Value format.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ConvertDataReaderToDataTable(System.Data.Common.DbDataReader)">
+            <summary>
+            Transforms a SqlDataReader object into a DataTable object.
+            </summary>
+            <param name="rdr">SqlDataReader object.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ConvertDataReaderToDataTable(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Transforms a SqlDataReader object into a DataTable object.
+            </summary>
+            <param name="rdr">SqlDataReader object.</param>
+            <param name="tableName">Name that identifies the table.</param>
+            <returns>DataTable object.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ProcessDataReader(System.Data.Common.DbDataReader)">
+            <summary>
+            Returns data from a SqlDataReader object to the caller.
+            </summary>
+            <param name="rdr">SqlDataReader object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ProcessDataSet(System.Data.DataSet)">
+            <summary>
+            Returns data from a DataSet to the caller.
+            </summary>
+            <param name="ds">DataSet object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ProcessDataTable(System.Data.DataTable)">
+            <summary>
+            Returns data from a DataTable to the caller.
+            </summary>
+            <param name="tab">DataTable object containing data to be returned to the caller.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ImportDataFromDataTable(System.Data.DataTable)">
+            <summary>
+            Loads rows contained in an ADO.NET data table to an MSOracle database table. Table must already exist. See CreateTable methods to create a new table.
+            </summary>
+            <param name="dt">DataTable object containing data to load.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ImportDataFromDataTable(System.Data.DataTable,System.Int32)">
+            <summary>
+            Loads rows contained in an ADO.NET data table to an MSOracle database table. Table must already exist. See CreateTable methods to create a new table.
+            </summary>
+            <param name="dt">DataTable object containing data to load.</param>
+            <param name="updateBatchSize">Number of individual SQL modification statements to include in a table modification operation.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ProcessDataTable(System.Data.DataTable,System.Int32)">
+            <summary>
+            Returns data from a DataTable to the caller.
+            </summary>
+            <param name="tab">DataTable object containing data to be returned to the caller.</param>
+            <param name="tableNumber">Arbitrary number used for identifying multiple DataTables.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractDelimitedDataFromDataReader(System.Data.Common.DbDataReader,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="rdr">Data reader object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractDelimitedDataFromDataSet(System.Data.DataSet,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractDelimitedDataFromTable(System.Data.DataTable,System.String,System.String,System.Boolean)">
+            <summary>
+            Produces data in delimited text format.
+            </summary>
+            <param name="tab">DataTable object.</param>
+            <param name="columnSeparator">One or more characters to denote end of a column.</param>
+            <param name="lineTerminator">One or more characters to denote end of a line. "\r\n" is the standard line terminator.</param>
+            <param name="columnNamesOnFirstLine">If true delimited list of column names is output at top of the data.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractFixedLengthDataFromDataReader(System.Data.Common.DbDataReader,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="rdr">Data reader object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractFixedLengthDataFromDataSet(System.Data.DataSet,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ExtractFixedLengthDataFromTable(System.Data.DataTable,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Produces data in fixed length text column format.
+            </summary>
+            <param name="tab">DataTable object.</param>
+            <param name="lineTerminator">If true, the output will be separated into lines using "\r\n" to terminate each line.</param>
+            <param name="columnNamesOnFirstLine">If true, a list of column names in fixed length column format is output at top of the data.</param>
+            <param name="allowDataTruncation">If true, data longer than column length will be truncated; otherwise an exception will be thrown.</param>
+            <remarks>Results can be retrieved by subscribing to the ResultAsStringDelegate Event. </remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.LoadXmlFileToDataTable(System.String)">
+            <summary>
+            Reads contents of xml file into a DataTable
+            </summary>
+            <param name="filePath">Location of Xml file.</param>
+            <returns>DataTable with data.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.LoadXmlFileToDataSet(System.String)">
+            <summary>
+            Reads contents of xml file into a DataSet
+            </summary>
+            <param name="filePath">Location of Xml file.</param>
+            <returns>DataSet with data.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataReaderToXmlFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes contents of DataReader in Xml format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataReaderWithSchemaToXmlFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes contents of DataReader plus the data schema in Xml format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataReaderToXmlSchemaFile(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            Writes data schema in Xsd format to specified output file.
+            </summary>
+            <param name="rdr">Data Reader object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataTableToXmlFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes contents of DataTable in Xml format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataTableWithSchemaToXmlFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes both the contents of DataTable and the associated data schema in Xml format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataTableToXmlSchemaFile(System.Data.DataTable,System.String)">
+            <summary>
+            Writes the data schema in Xsd format to specified output file.
+            </summary>
+            <param name="dt">DataTable object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataSetToXmlFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes contents of DataSet in Xml format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataSetWithSchemaToXmlFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes both the contents of DataSet and the assoicated data schema in Xml format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xml output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.SaveDataSetToXmlSchemaFile(System.Data.DataSet,System.String)">
+            <summary>
+            Writes data schema of DataSet in Xsd format to specified output file.
+            </summary>
+            <param name="ds">DataSet object.</param>
+            <param name="filePath">Location of the Xsd output file.</param>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetTableList">
+            <summary>
+            Retrieves list of tables and their associated schema information contained in the database pointed to by the current connection.
+            </summary>
+            <returns>Object containing the list of table definitions.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.GetTableList(System.String[],System.String[])">
+            <summary>
+            Retrieves list of tables and their associated schema information contained in the database pointed to by the current connection.
+            </summary>
+            <param name="includePatterns">Wildard pattern to use when selecting which tables to include. Specify * or null or empty string for pattern to include all tables.</param>
+            <param name="excludePatterns">Wildard pattern to use when selecting which tables to exclude. Specify * for pattern to exclude all tables. Specify null or empty string to exclude no tables.</param>
+            <returns>Object containing the list of table definitions.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.ConvertTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef},System.String)">
+            <summary>
+            Method to convert table definitions from another database format to the data format supported by this class.
+            </summary>
+            <param name="tableDefs">Object containing the list of table definitions to be converted.</param>
+            <param name="newSchemaName">Specify a new schema (owner) name for the tables when they are recreated in the database managed by the current instance.</param>
+            <returns>Object containing the list of table definitions after they have been converted to match the data formats of the current instance.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateTablesFromTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef})">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="tableDefs">Object containing list of table definitions.</param>
+            <returns>Number of tables created.</returns>
+            <remarks>Will not create table if table already exists.</remarks>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CreateTablesFromTableDefs(PFCollectionsObjects.PFList{PFDataAccessObjects.PFTableDef},System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="tableDefs">Object containing list of table definitions.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CopyTableDataFromTableDefs(PFDataAccessObjects.PFDatabase,System.String,System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="sourceDatabase">Database containing source tables..</param>
+            <param name="newSchemaName">Schema to use for identifying the destination tables.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="M:PFSQLAnywhereObjects.PFSQLAnywhere.CopyTableDataFromTableDefs(PFDataAccessObjects.PFDatabase,System.String[],System.String[],System.String,System.Boolean)">
+            <summary>
+            Runs the table create statements contained in the provided tableDefs object.
+            </summary>
+            <param name="sourceDatabase">Database containing source tables..</param>
+            <param name="tableIncludePatterns">Wildard pattern to use when selecting which tables to include. Specify * or null or empty string for pattern to include all tables.</param>
+            <param name="tableExcludePatterns">Wildard pattern to use when selecting which tables to exclude. Specify * for pattern to exclude all tables. Specify null or empty string to exclude no tables.</param>
+            <param name="newSchemaName">Schema to use for identifying the destination tables.</param>
+            <param name="dropBeforeCreate">If true and table already exists, table will be dropped and then recreated using the table definition in the supplied PFTableDefs list. If false, table create step is bypassed if table already exists.</param>
+            <returns>Number of tables created.</returns>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.DbPlatform">
+            <summary>
+            Identifies the database platform supported by this class.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.Connection">
+            <summary>
+            ADO.NET connection object for this instance.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.Command">
+            <summary>
+            ADO.NET command object for this instance.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.CommandType">
+            <summary>
+            Type of command: text or stored procedure.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.CommandTimeout">
+            <summary>
+            Number of seconds to wait before a command is timed out.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.SQLQuery">
+            <summary>
+            SQL text to execute.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.DataSourceName">
+            <summary>
+            Data source value for connection string. Leave blank if Databasefile specified.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.DatabasePath">
+            <summary>
+            Path to the file containing the data.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.ServerName">
+            <summary>
+            Name of the server containing the data.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.DatabaseName">
+            <summary>
+            Name of the database containing the data.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.DatabaseKey">
+            <summary>
+            Key used to access database.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.Encryption">
+            <summary>
+            Type of encryption used for the database.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.EncryptedPassword">
+            <summary>
+            Encrypted password used for the database.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.Username">
+            <summary>
+            Name of user.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.Password">
+            <summary>
+            Password for user.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.ConnectionString">
+            <summary>
+            Connection string to be used for this instance. Is built automatically if server, database, etc. are specified separately via this instance's properties. If a complete connection string is passed into this property, then it is parsed and the various components are stored in this instance's various properties (server, database, etc.).
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.ConnectionStringKeyVals">
+            <summary>
+            Returns list of all the keys and their values contained in the current connection string.
+            </summary>
+        </member>
+        <member name="P:PFSQLAnywhereObjects.PFSQLAnywhere.IsConnected">
+            <summary>
+            Returns true if the connection is open.
+            </summary>
+        </member>
+    </members>
+</doc>

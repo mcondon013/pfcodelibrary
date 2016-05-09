@@ -394,6 +394,7 @@ namespace PFSQLAnywhereULObjects
         /// Creates a SQL Anywhere Ultra Lite .udb database file.
         /// </summary>
         /// <param name="databasePath">Full path to database file to be created.</param>
+        /// <param name="encrypt">True if database is encrypted.</param>
         /// <param name="encryptionKey">Encryption key for the database.</param>
         /// <returns>True if database created. Otherwise false.</returns>
         public bool CreateDatabase(string databasePath, bool encrypt,  string encryptionKey)
@@ -942,7 +943,7 @@ namespace PFSQLAnywhereULObjects
         /// <summary>
         /// Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List in Key/Value format.</returns>
         private PFCollectionsObjects.PFKeyValueList<string, string> GetConnectionStringKeyVals()
         {
             ULConnectionStringBuilder ulConnBuilder = new ULConnectionStringBuilder(this.ConnectionString);

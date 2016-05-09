@@ -13,6 +13,9 @@ using PFListObjects;
 
 namespace PFProviderForms
 {
+    /// <summary>
+    /// Form for selecting which database providers to display to applications.
+    /// </summary>
     public partial class ProviderSelectorForm : Form
     {
         private StringBuilder _msg = new StringBuilder();
@@ -54,7 +57,9 @@ namespace PFProviderForms
 
 
 
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public ProviderSelectorForm()
         {
             InitializeComponent();
@@ -145,6 +150,9 @@ namespace PFProviderForms
 
 
         //common form processing routines
+        /// <summary>
+        /// Routines to initialize form.
+        /// </summary>
         public void InitializeForm()
         {
             _userExitButtonPressed = false;
@@ -175,11 +183,17 @@ namespace PFProviderForms
             //RefreshListBoxes(); //list boxes refreshed in CheckedChanged routine
         }
 
+        /// <summary>
+        /// Hides the form. 
+        /// </summary>
         public void HideForm()
         {
             this.Hide();
         }
 
+        /// <summary>
+        /// Closes form.
+        /// </summary>
         public void CloseForm()
         {
             this.Close();
@@ -433,6 +447,9 @@ namespace PFProviderForms
             ResetSelectorControls();
         }
 
+        /// <summary>
+        /// Sets or disables selector controls.
+        /// </summary>
         public void ResetSelectorControls()
         {
             if (this.lstSupportedProviders.Items.Count > 0)

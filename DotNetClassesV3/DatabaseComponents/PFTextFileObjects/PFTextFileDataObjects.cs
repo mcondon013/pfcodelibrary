@@ -334,7 +334,7 @@ namespace PFTextFiles
         /// <summary>
         /// Returns a string containing the contents of the object in XML format.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string ToXmlString()
         {
             XmlSerializer ser = new XmlSerializer(typeof(PFColDef));
@@ -842,7 +842,7 @@ namespace PFTextFiles
         /// <summary>
         /// Returns a string containing the contents of the object in XML format.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string ToXmlString()
         {
             XmlSerializer ser = new XmlSerializer(typeof(PFColDefExt));
@@ -915,7 +915,7 @@ namespace PFTextFiles
         /// <summary>
         /// Returns a string containing the contents of the object in XML format.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string ToXmlString()
         {
             XmlSerializer ser = new XmlSerializer(typeof(PFColData));

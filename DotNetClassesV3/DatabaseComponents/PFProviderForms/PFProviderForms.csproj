@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFProviderForms.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PFCollectionsObjects, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">

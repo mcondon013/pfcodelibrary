@@ -834,7 +834,7 @@ namespace PFSybaseObjects
         /// <summary>
         /// Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List in Key/Value format.</returns>
         private PFCollectionsObjects.PFKeyValueList<string, string> GetConnectionStringKeyVals()
         {
             PFParseString connBuilder = new PFParseString();

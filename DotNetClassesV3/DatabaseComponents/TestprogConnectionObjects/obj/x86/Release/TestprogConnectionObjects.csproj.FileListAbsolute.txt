@@ -26,7 +26,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\b
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFAppDataObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFDataOutputGrid.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFThreadObjects.dll
@@ -42,3 +41,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\o
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\obj\x86\Release\TestprogConnectionObjects.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\obj\x86\Release\TestprogConnectionObjects.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFDataGridViewFilterPopup.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFDataOutputProcessor.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFDataGridViewColumnSelector.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogConnectionObjects\bin\Release\PFRandomDataExt.dll

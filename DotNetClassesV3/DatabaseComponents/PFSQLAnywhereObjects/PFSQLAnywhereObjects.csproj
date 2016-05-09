@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFSQLAnywhereObjects.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="iAnywhere.Data.SQLAnywhere.v4.0, Version=12.0.1.34574, Culture=neutral, PublicKeyToken=f222fc4333e0d400, processorArchitecture=MSIL">

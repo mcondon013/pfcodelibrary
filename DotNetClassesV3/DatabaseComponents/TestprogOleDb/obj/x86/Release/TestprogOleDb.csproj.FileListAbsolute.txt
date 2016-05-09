@@ -12,7 +12,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\P
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFUnitTestDataObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFThreadObjects.dll
@@ -25,3 +24,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\obj\x86\Relea
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\obj\x86\Release\TestprogOleDb.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\obj\x86\Release\TestprogOleDb.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogOleDb\bin\Release\PFRandomDataExt.dll

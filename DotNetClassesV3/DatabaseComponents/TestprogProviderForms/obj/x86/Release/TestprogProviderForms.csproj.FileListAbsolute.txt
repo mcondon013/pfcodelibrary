@@ -18,7 +18,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\R
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFConnectionObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFRandomData.dll
@@ -32,3 +31,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\obj\x
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\obj\x86\Release\TestprogProviderForms.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\obj\x86\Release\TestprogProviderForms.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogProviderForms\bin\Release\PFRandomDataExt.dll

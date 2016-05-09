@@ -1,3 +1,4 @@
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFProviderForms.XML
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFProviderForms.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFProviderForms.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFCollectionsObjects.dll
@@ -14,6 +15,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFFileSystemObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFRandomData.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFConnectionObjects.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\PFConnectionObjects.xml
@@ -23,4 +25,3 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\obj\Release
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\obj\Release\GenerateResource.write.1.tlog
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\obj\Release\PFProviderForms.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\obj\Release\PFProviderForms.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFProviderForms\bin\Release\Ionic.Zip.dll

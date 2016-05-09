@@ -25,7 +25,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Relea
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFCollectionsObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\obj\x86\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\obj\x86\Release\TestprogTextFiles.MainForm.resources
@@ -35,3 +34,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\obj\x86\R
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\obj\x86\Release\TestprogTextFiles.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\obj\x86\Release\TestprogTextFiles.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogTextFiles\bin\Release\PFRandomDataExt.dll

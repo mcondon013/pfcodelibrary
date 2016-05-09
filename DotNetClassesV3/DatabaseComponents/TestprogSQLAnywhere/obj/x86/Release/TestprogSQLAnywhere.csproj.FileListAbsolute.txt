@@ -27,3 +27,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhere\obj\x86
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhere\obj\x86\Release\GenerateResource.write.1.tlog
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhere\obj\x86\Release\TestprogSQLAnywhere.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhere\obj\x86\Release\TestprogSQLAnywhere.pdb
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhere\bin\Release\Ionic.Zip.dll

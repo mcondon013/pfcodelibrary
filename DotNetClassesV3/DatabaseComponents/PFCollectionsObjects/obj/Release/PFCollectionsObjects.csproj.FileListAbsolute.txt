@@ -12,3 +12,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\bin\Re
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Release\PFCollectionsObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Release\PFCollectionsObjects.pdb
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\bin\Release\Ionic.Zip.dll

@@ -46,14 +46,14 @@
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in Key/Value format.</returns>
         </member>
         <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.GetSqlCeEngine(System.String)">
             <summary>
             Creates a SQLCE library object.
             </summary>
             <param name="connectionString"></param>
-            <returns></returns>
+            <returns>Object representing SQL Server CE 3.5 engine.</returns>
         </member>
         <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateDatabase(System.String,System.String)">
             <summary>
@@ -69,7 +69,7 @@
             Creates a SQLCE database file.
             </summary>
             <param name="connectionString"></param>
-            <returns></returns>
+            <returns>True if database created.</returns>
         </member>
         <member name="M:PFSQLServerCE35Objects.PFSQLServerCE35.CreateTable(System.Data.DataTable)">
             <summary>

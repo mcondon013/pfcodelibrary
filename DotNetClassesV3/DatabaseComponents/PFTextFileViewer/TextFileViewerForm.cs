@@ -12,6 +12,9 @@ using Microsoft.VisualBasic;
 
 namespace PFTextFileViewer
 {
+    /// <summary>
+    /// Windows Form containg the text file viewer.
+    /// </summary>
     public partial class TextFileViewerForm : Form
     {
         private int _findStartPos = 0;
@@ -29,6 +32,9 @@ namespace PFTextFileViewer
         private static extern int GetSystemMenu(int hWnd, bool bRevert);
         private const int MF_BYPOSITION = 0x400;
 
+        /// <summary>
+        /// Initializing routines for the form.
+        /// </summary>
         public TextFileViewerForm()
         {
             InitializeComponent();
@@ -169,6 +175,10 @@ namespace PFTextFileViewer
             this.txtViewer.Focus();
         }
 
+        /// <summary>
+        /// Saves contents of the viewer to an external file.
+        /// </summary>
+        /// <param name="pbRunningInBatchMode">Specifies whether or not viewer is running in batch mode.</param>
         public void FileSave(bool pbRunningInBatchMode)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -295,6 +305,9 @@ namespace PFTextFileViewer
         }
 
         // Properties
+        /// <summary>
+        /// Set to true to allow display of File/Erase menu option.
+        /// </summary>
         public bool AllowFileErase
         {
             get

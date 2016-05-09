@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFSQLBuilderObjects</name>
+    </assembly>
+    <members>
+        <member name="F:PFSQLBuilderObjects.QueryBuilderForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFSQLBuilderObjects.QueryBuilderForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFSQLBuilderObjects.QueryBuilderForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PFSQLBuilderObjects.PFQueryBuilder">
+            <summary>
+            Class containing routines for manaing a query builder session.
+            </summary>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.CreateQueryBuilderObject(PFDataAccessObjects.DatabasePlatform,System.String)">
+            <summary>
+            Routine to create an instance of the PFQueryBuilder class.
+            </summary>
+            <param name="dbPlat">Database platform to use.</param>
+            <param name="connStr">Connection string for the query.</param>
+            <returns>Object that implements ISQLBuilder interface.</returns>
+            <remarks>Default AnsiSQLLevel SQL92 will be used. </remarks>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.CreateQueryBuilderObject(PFDataAccessObjects.DatabasePlatform,System.String,PFDataAccessObjects.AnsiSQLLevel)">
+            <summary>
+            Routine to create an instance of the PFQueryBuilder class.
+            </summary>
+            <param name="dbPlat">Database platform to use.</param>
+            <param name="connStr">Connection string for the query.</param>
+            <param name="ansiLevel">AnsiSQLLevel for the query builder to use.</param>
+            <returns>Object that implements ISQLBuilder interface.</returns>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.ConvertDbPlatformToQueryBuilderPlatform(PFDataAccessObjects.DatabasePlatform)">
+            <summary>
+            Converts a DatabasePlatform enum value to its equivalent QueryBuilderDatabasePlatform enum value.
+            </summary>
+            <param name="dbPlat">DatabasePlatform enum value to convert.</param>
+            <returns>QueryBuilderDatabasePlatform enum value.</returns>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.ShowQueryBuilder(System.String)">
+            <summary>
+            Displays an instance of QueryBuilderForm.
+            </summary>
+            <param name="queryText">(optional)SQL query text from calling application. Leave blank if defining a query from scratch..</param>
+            <returns>SQL query text defined through the query builder form.</returns>
+        </member>
+        <member name="M:PFSQLBuilderObjects.PFQueryBuilder.RunQueryBuilderTest(System.String)">
+            <summary>
+            Unit testing routine.
+            </summary>
+            <param name="queryText"></param>
+            <returns>String value.</returns>
+        </member>
+        <member name="P:PFSQLBuilderObjects.PFQueryBuilder.ConnectionString">
+            <summary>
+            Connection string to database containing metadata for the query.
+            </summary>
+        </member>
+        <member name="P:PFSQLBuilderObjects.PFQueryBuilder.DatabasePlatform">
+            <summary>
+            Used to determine which metadata provider and syntax checker the query builder will use.
+            </summary>
+        </member>
+        <member name="P:PFSQLBuilderObjects.PFQueryBuilder.AnsiSQLVersion">
+            <summary>
+            Used to determine what type of SQL syntax checking to use for OLEDB and ODBC connections. 
+            </summary>
+        </member>
+        <member name="F:PFSQLBuilderObjects.QueryParametersForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFSQLBuilderObjects.QueryParametersForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFSQLBuilderObjects.QueryParametersForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

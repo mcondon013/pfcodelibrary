@@ -364,7 +364,7 @@ namespace PFDataAccessObjects
         /// <param name="overwriteExistingFile">True to first delete any file with same name at databasePath. If False, any file exists, an exception will be thrown.</param>
         /// <param name="dbUsername">Username to logon with. Default is admin.</param>
         /// <param name="dbPassword">Password to logon with. Default is empty string.</param>
-        /// <returns></returns>
+        /// <returns>Object representing an MS Acess database.</returns>
         public static PFMsAccess CreateDatabase(string databasePath, AccessVersion databaseVersion, bool overwriteExistingFile,  string dbUsername, string dbPassword)
         {
             string errMsg = string.Empty;
@@ -499,7 +499,7 @@ namespace PFDataAccessObjects
         /// <summary>
         /// Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List in key/value format.</returns>
         private PFKeyValueList<string, string> GetConnectionStringKeyVals()
         {
             

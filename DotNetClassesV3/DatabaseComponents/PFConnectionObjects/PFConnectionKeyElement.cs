@@ -184,7 +184,7 @@ namespace PFConnectionObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
@@ -201,7 +201,7 @@ namespace PFConnectionObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -323,7 +323,7 @@ namespace PFConnectionObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

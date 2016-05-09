@@ -245,7 +245,7 @@ namespace PFDataAccessObjects
         /// <param name="columnDelimiter">Delimiter character used to separate column data.</param>
         /// <param name="lineTerminator">Delimiter that marks the end of a line of data.</param>
         /// <param name="columnNamesOnFirstLine">If true, first line of file contains column names. Otherwise, file does not contain column names.</param>
-        /// <returns></returns>
+        /// <returns>Object representing class used to define and parse a delimited line of text.</returns>
         public PFDelimitedDataLine CreateDelimitedLineDefinitionFromTextFile(string textFilePath, string columnDelimiter, string lineTerminator, bool columnNamesOnFirstLine)
         {
             return CreateDelimitedLineDefinitionFromTextFile(textFilePath, columnDelimiter, lineTerminator, columnNamesOnFirstLine, false);
@@ -259,7 +259,7 @@ namespace PFDataAccessObjects
         /// <param name="lineTerminator">Delimiter that marks the end of a line of data.</param>
         /// <param name="columnNamesOnFirstLine">If true, first line of file contains column names. Otherwise, file does not contain column names.</param>
         /// <param name="stringValuesSurroundedWithQuotationMarks">If true, values in file are surrounded by double quotes.</param>
-        /// <returns></returns>
+        /// <returns>Object representing class used to define and parse a delimited line of text.</returns>
         public PFDelimitedDataLine CreateDelimitedLineDefinitionFromTextFile(string textFilePath, string columnDelimiter, string lineTerminator, bool columnNamesOnFirstLine, bool stringValuesSurroundedWithQuotationMarks)
         {
             PFDelimitedDataLine delimitedLine = null;

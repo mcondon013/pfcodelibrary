@@ -194,7 +194,7 @@ namespace PFSQLBuilderObjects
         /// Unit testing routine.
         /// </summary>
         /// <param name="queryText"></param>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public static string RunQueryBuilderTest(string queryText)
         {
             string modifiedQueryText = queryText;

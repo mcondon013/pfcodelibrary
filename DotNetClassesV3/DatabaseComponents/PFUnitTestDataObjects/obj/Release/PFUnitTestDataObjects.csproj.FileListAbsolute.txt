@@ -13,8 +13,8 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\R
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\PFFileSystemObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\PFRandomData.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\obj\Release\PFUnitTestDataObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\obj\Release\PFUnitTestDataObjects.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFUnitTestDataObjects\bin\Release\Ionic.Zip.dll

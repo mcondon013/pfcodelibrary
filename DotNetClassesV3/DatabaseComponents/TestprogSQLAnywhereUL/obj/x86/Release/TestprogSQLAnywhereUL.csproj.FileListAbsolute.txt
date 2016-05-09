@@ -26,3 +26,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhereUL\bin\R
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhereUL\bin\Release\PFRandomData.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhereUL\obj\x86\Release\TestprogSQLAnywhereUL.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhereUL\obj\x86\Release\TestprogSQLAnywhereUL.pdb
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogSQLAnywhereUL\bin\Release\Ionic.Zip.dll

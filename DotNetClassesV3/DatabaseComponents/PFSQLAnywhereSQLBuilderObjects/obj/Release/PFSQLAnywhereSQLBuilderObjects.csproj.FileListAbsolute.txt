@@ -1,5 +1,5 @@
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\QbfUsersGuide.chm
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFSQLBuilderObjects.xml
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFSQLAnywhereSQLBuilderObjects.xml
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFSQLAnywhereSQLBuilderObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFSQLAnywhereSQLBuilderObjects.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\ActiveDatabaseSoftware.ActiveQueryBuilder2.dll
@@ -38,6 +38,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObje
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\Sybase.AdoNet4.AseClient.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFCollectionsObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFTextFile.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFEncryptionObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLAnywhereSQLBuilderObjects\bin\Release\PFRandomDataExt.dll

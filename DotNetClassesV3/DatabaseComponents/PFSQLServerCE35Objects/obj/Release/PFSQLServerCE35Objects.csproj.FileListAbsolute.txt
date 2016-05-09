@@ -42,8 +42,8 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\PFFileSystemObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\PFRandomData.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\obj\Release\PFSQLServerCE35Objects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\obj\Release\PFSQLServerCE35Objects.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFSQLServerCE35Objects\bin\Release\Ionic.Zip.dll

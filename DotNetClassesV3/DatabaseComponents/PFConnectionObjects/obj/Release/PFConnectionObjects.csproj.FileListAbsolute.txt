@@ -12,6 +12,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Rel
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFTextFile.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFSystemObjects.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\Ionic.Zip.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\PFThreadObjects.dll
@@ -19,4 +20,3 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Rel
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\obj\Release\PFConnectionObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\obj\Release\PFConnectionObjects.pdb
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionObjects\bin\Release\Ionic.Zip.dll

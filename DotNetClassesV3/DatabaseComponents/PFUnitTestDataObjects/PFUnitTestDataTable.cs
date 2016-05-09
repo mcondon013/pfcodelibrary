@@ -336,7 +336,7 @@ namespace PFUnitTestDataObjects
         /// <summary>
         /// Creates an ADO.NET DataTable object using the table definition contained in the collection of column definitions encapsulated by this instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>DataTable object.</returns>
         public DataTable GetDataTableFromTableColumns()
         {
             return GetDataTableFromTableColumns(false);
@@ -346,7 +346,7 @@ namespace PFUnitTestDataObjects
         /// Creates an ADO.NET DataTable object using the table definition contained in the collection of column definitions encapsulated by this instance.
         /// </summary>
         /// <param name="useDataTypeSubset">If true, then only a small subset of .NET data types will be used. This is needed when trying to create a table via generic OLEDB or ODBC syntax.</param>
-        /// <returns></returns>
+        /// <returns>DataTable object.</returns>
         public DataTable GetDataTableFromTableColumns(bool useDataTypeSubset)
         {
             DataTable dt = new DataTable();
@@ -652,7 +652,7 @@ namespace PFUnitTestDataObjects
         /// <summary>
         /// Routine to import the data table encapsulated in this instance to a corresponding table in the database.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>True if data import was successful.</returns>
         public bool ImportTableToDatabase()
         {
             bool dataImportSuccessful = false;
@@ -734,7 +734,7 @@ namespace PFUnitTestDataObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
@@ -751,7 +751,7 @@ namespace PFUnitTestDataObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -873,7 +873,7 @@ namespace PFUnitTestDataObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

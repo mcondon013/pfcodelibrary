@@ -174,7 +174,7 @@
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in Key/Value format.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFSQLServer.ConvertDataReaderToDataTable(System.Data.Common.DbDataReader)">
             <summary>
@@ -571,7 +571,7 @@
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in Key/Value format.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFOdbc.CreateTable(System.Data.DataTable)">
             <summary>
@@ -1194,19 +1194,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDefinitions.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDefinitions.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDefinitions.ToXmlString">
             <summary>
@@ -1333,7 +1333,7 @@
             <param name="columnDelimiter">Delimiter character used to separate column data.</param>
             <param name="lineTerminator">Delimiter that marks the end of a line of data.</param>
             <param name="columnNamesOnFirstLine">If true, first line of file contains column names. Otherwise, file does not contain column names.</param>
-            <returns></returns>
+            <returns>Object representing class used to define and parse a delimited line of text.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDataImporter.CreateDelimitedLineDefinitionFromTextFile(System.String,System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -1344,7 +1344,7 @@
             <param name="lineTerminator">Delimiter that marks the end of a line of data.</param>
             <param name="columnNamesOnFirstLine">If true, first line of file contains column names. Otherwise, file does not contain column names.</param>
             <param name="stringValuesSurroundedWithQuotationMarks">If true, values in file are surrounded by double quotes.</param>
-            <returns></returns>
+            <returns>Object representing class used to define and parse a delimited line of text.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDataImporter.GetDelimitedTextFileSchemaTable(System.String,System.String,System.String,System.Boolean)">
             <summary>
@@ -1445,19 +1445,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDef.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDef.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFTableDef.ToXmlString">
             <summary>
@@ -1600,7 +1600,7 @@
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in Key/Value format.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFOleDb.CreateTable(System.Data.DataTable)">
             <summary>
@@ -2160,7 +2160,7 @@
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in Key/Value format.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFMsOracle.CreateTable(System.Data.DataTable)">
             <summary>
@@ -2749,13 +2749,13 @@
             <param name="overwriteExistingFile">True to first delete any file with same name at databasePath. If False, any file exists, an exception will be thrown.</param>
             <param name="dbUsername">Username to logon with. Default is admin.</param>
             <param name="dbPassword">Password to logon with. Default is empty string.</param>
-            <returns></returns>
+            <returns>Object representing an MS Acess database.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFMsAccess.GetConnectionStringKeyVals">
             <summary>
             Returns a list of key/value pairs that contains all the keys and their associated values for the current connection string.
             </summary>
-            <returns></returns>
+            <returns>List in key/value format.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFMsAccess.CreateTable(System.Data.DataTable)">
             <summary>
@@ -3731,7 +3731,7 @@
             Creates a Desktop database file.
             </summary>
             <param name="connectionString">Supply a connection string for SQLCE 3.5 or SQLCE 4.0 or a full file path for SQL Anywhere or SQL AnywhereUL.</param>
-            <returns></returns>
+            <returns>True if databases created.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDatabase.CreateTable(System.Data.DataTable)">
             <summary>
@@ -4194,19 +4194,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDatabase.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDatabase.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFDataAccessObjects.PFDatabase.GetPropertyValue(System.String)">
             <summary>

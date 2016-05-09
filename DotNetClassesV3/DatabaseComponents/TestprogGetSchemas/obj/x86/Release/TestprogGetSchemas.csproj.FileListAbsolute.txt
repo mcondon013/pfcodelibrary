@@ -65,8 +65,8 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Rele
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFTimers.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFRandomData.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogGetSchemas\bin\Release\PFRandomDataExt.dll

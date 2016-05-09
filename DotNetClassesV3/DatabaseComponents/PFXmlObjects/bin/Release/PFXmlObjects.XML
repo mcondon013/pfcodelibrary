@@ -176,19 +176,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFXmlObjects.PFXmlDocument.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFXmlObjects.PFXmlDocument.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="P:PFXmlObjects.PFXmlDocument.XmlDoc">
             <summary>

@@ -1,5 +1,8 @@
 namespace PFTextFileViewer
 {
+    /// <summary>
+    /// WinForms designer for the text viewer.
+    /// </summary>
     partial class TextFileViewerForm
     {
         /// <summary>

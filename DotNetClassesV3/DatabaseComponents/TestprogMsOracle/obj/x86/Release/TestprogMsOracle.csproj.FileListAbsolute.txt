@@ -14,7 +14,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Releas
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFUnitTestDataObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFThreadObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFRandomData.dll
@@ -26,3 +25,4 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\obj\x86\Re
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\obj\x86\Release\TestprogMsOracle.exe
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\obj\x86\Release\TestprogMsOracle.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\TestprogMsOracle\bin\Release\PFRandomDataExt.dll

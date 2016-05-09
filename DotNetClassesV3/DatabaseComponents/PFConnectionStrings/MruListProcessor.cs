@@ -343,7 +343,7 @@ namespace PFConnectionStrings
 		/// <para>This method expects fully resolved pathnames to be passed to it.
 		/// (Use Path.GetFullPath() to obtain this.)</para>
 		/// </remarks>
-		/// <returns></returns>
+		/// <returns>String value.</returns>
 		static public string ShortenPathname(string pathname, int maxLength)
 		{
 			if (pathname.Length <= maxLength)

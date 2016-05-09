@@ -102,7 +102,6 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Rel
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFTextObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFDataOutputGrid.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFEncryptionObjects.dll
-C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFRandomDataExt.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFXmlObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFPrinterObjects.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFDocumentObjects.dll
@@ -136,3 +135,7 @@ C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\obj\Rel
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\obj\Release\PFConnectionStrings.dll
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\obj\Release\PFConnectionStrings.pdb
 C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\Ionic.Zip.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFDataGridViewFilterPopup.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFDataOutputProcessor.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFDataGridViewColumnSelector.dll
+C:\ProFast\CPLibs\DotNetClassesV3\DatabaseComponents\PFConnectionStrings\bin\Release\PFRandomDataExt.dll

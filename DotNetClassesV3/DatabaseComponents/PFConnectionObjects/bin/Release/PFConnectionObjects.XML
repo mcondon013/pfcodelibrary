@@ -233,19 +233,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionManager.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionManager.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionManager.ToXmlString">
             <summary>
@@ -321,19 +321,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionDefinition.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionDefinition.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionDefinition.ToXmlString">
             <summary>
@@ -425,19 +425,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFProviderDefinition.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFProviderDefinition.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFProviderDefinition.ToXmlString">
             <summary>
@@ -548,19 +548,19 @@
             <summary>
             Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionKeyElement.PropertiesToString">
             <summary>
             Routine outputs name and value for all properties.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionKeyElement.FieldsToString">
             <summary>
             Routine outputs name and value for all fields.
             </summary>
-            <returns></returns>
+            <returns>String value.</returns>
         </member>
         <member name="M:PFConnectionObjects.PFConnectionKeyElement.ToXmlString">
             <summary>
