@@ -21,7 +21,6 @@ namespace pfEncryptor
         private bool _saveErrorMessagesToAppLog = true;
         private string _appLogFileName = @"pfEncryptor.log";
         private string _appLogFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\PFApps\pfEncryptor\Logs\";
-        private string _helpFilePath = string.Empty;
 
         PFAppProcessor _appProcessor = new PFAppProcessor();
         private string _defaultKeyIVSaveFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),@"PFApps\pfEncryptor\Settings\");
@@ -389,7 +388,6 @@ namespace pfEncryptor
         internal void InitAppProcessor()
         {
             _appProcessor.SaveErrorMessagesToAppLog = _saveErrorMessagesToAppLog;
-            _appProcessor.HelpFilePath = _helpFilePath;
         }
 
         //click events for encryption

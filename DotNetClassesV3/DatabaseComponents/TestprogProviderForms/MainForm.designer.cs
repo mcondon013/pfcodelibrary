@@ -33,30 +33,12 @@
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuToolsOptions = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuToolsOptionsUserSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuToolsOptionsApplicationSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuToolsForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuToolsFormSaveScreenLocations = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuToolsFormRestoreScreenLocations = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHelpContents = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHelpIndex = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHelpSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuHelpTutorial = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuHelpContact = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.grpTestsToRun = new System.Windows.Forms.GroupBox();
+            this.chkShowProviderSelectorForm = new System.Windows.Forms.CheckBox();
             this.chkGetStaticKeysTest = new System.Windows.Forms.CheckBox();
             this.chkShowDateTimeTest = new System.Windows.Forms.CheckBox();
             this.chkEraseOutputBeforeEachTest = new System.Windows.Forms.CheckBox();
             this.appHelpProvider = new System.Windows.Forms.HelpProvider();
-            this.chkShowProviderSelectorForm = new System.Windows.Forms.CheckBox();
             this.MainMenu.SuspendLayout();
             this.grpTestsToRun.SuspendLayout();
             this.SuspendLayout();
@@ -94,9 +76,7 @@
             // MainMenu
             // 
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuFile,
-            this.mnuTools,
-            this.mnuHelp});
+            this.mnuFile});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(638, 24);
@@ -114,145 +94,9 @@
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(92, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(152, 22);
             this.mnuFileExit.Text = "E&xit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
-            // 
-            // mnuTools
-            // 
-            this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuToolsOptions,
-            this.mnuToolsForm});
-            this.mnuTools.Name = "mnuTools";
-            this.mnuTools.Size = new System.Drawing.Size(48, 20);
-            this.mnuTools.Text = "&Tools";
-            // 
-            // mnuToolsOptions
-            // 
-            this.mnuToolsOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuToolsOptionsUserSettings,
-            this.toolStripSeparator1,
-            this.mnuToolsOptionsApplicationSettings});
-            this.mnuToolsOptions.Name = "mnuToolsOptions";
-            this.mnuToolsOptions.Size = new System.Drawing.Size(116, 22);
-            this.mnuToolsOptions.Text = "&Options";
-            // 
-            // mnuToolsOptionsUserSettings
-            // 
-            this.mnuToolsOptionsUserSettings.Name = "mnuToolsOptionsUserSettings";
-            this.mnuToolsOptionsUserSettings.Size = new System.Drawing.Size(180, 22);
-            this.mnuToolsOptionsUserSettings.Text = "&User Settings";
-            this.mnuToolsOptionsUserSettings.ToolTipText = "View and modify user specific option settings";
-            this.mnuToolsOptionsUserSettings.Click += new System.EventHandler(this.mnuToolsOptionsUserSettings_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // mnuToolsOptionsApplicationSettings
-            // 
-            this.mnuToolsOptionsApplicationSettings.Name = "mnuToolsOptionsApplicationSettings";
-            this.mnuToolsOptionsApplicationSettings.Size = new System.Drawing.Size(180, 22);
-            this.mnuToolsOptionsApplicationSettings.Text = "&Application Settings";
-            this.mnuToolsOptionsApplicationSettings.ToolTipText = "View and modify application option settings that apply to all users.";
-            this.mnuToolsOptionsApplicationSettings.Click += new System.EventHandler(this.mnuToolsOptionsApplicationSettings_Click);
-            // 
-            // mnuToolsForm
-            // 
-            this.mnuToolsForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuToolsFormSaveScreenLocations,
-            this.mnuToolsFormRestoreScreenLocations});
-            this.mnuToolsForm.Name = "mnuToolsForm";
-            this.mnuToolsForm.Size = new System.Drawing.Size(116, 22);
-            this.mnuToolsForm.Text = "&Form";
-            // 
-            // mnuToolsFormSaveScreenLocations
-            // 
-            this.mnuToolsFormSaveScreenLocations.Name = "mnuToolsFormSaveScreenLocations";
-            this.mnuToolsFormSaveScreenLocations.Size = new System.Drawing.Size(205, 22);
-            this.mnuToolsFormSaveScreenLocations.Text = "&Save Screen Locations";
-            this.mnuToolsFormSaveScreenLocations.Click += new System.EventHandler(this.mnuToolsFormSaveScreenLocations_Click);
-            // 
-            // mnuToolsFormRestoreScreenLocations
-            // 
-            this.mnuToolsFormRestoreScreenLocations.Name = "mnuToolsFormRestoreScreenLocations";
-            this.mnuToolsFormRestoreScreenLocations.Size = new System.Drawing.Size(205, 22);
-            this.mnuToolsFormRestoreScreenLocations.Text = "&Restore Screen Locations";
-            this.mnuToolsFormRestoreScreenLocations.Click += new System.EventHandler(this.mnuToolsFormRestoreScreenLocations_Click);
-            // 
-            // mnuHelp
-            // 
-            this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuHelpContents,
-            this.mnuHelpIndex,
-            this.mnuHelpSearch,
-            this.toolStripSeparator2,
-            this.mnuHelpTutorial,
-            this.toolStripSeparator3,
-            this.mnuHelpContact,
-            this.toolStripSeparator4,
-            this.mnuHelpAbout});
-            this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(44, 20);
-            this.mnuHelp.Text = "&Help";
-            // 
-            // mnuHelpContents
-            // 
-            this.mnuHelpContents.Name = "mnuHelpContents";
-            this.mnuHelpContents.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpContents.Text = "Contents";
-            this.mnuHelpContents.Click += new System.EventHandler(this.mnuHelpContents_Click);
-            // 
-            // mnuHelpIndex
-            // 
-            this.mnuHelpIndex.Name = "mnuHelpIndex";
-            this.mnuHelpIndex.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpIndex.Text = "Index";
-            this.mnuHelpIndex.Click += new System.EventHandler(this.mnuHelpIndex_Click);
-            // 
-            // mnuHelpSearch
-            // 
-            this.mnuHelpSearch.Name = "mnuHelpSearch";
-            this.mnuHelpSearch.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpSearch.Text = "Search";
-            this.mnuHelpSearch.Click += new System.EventHandler(this.mnuHelpSearch_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(219, 6);
-            // 
-            // mnuHelpTutorial
-            // 
-            this.mnuHelpTutorial.Name = "mnuHelpTutorial";
-            this.mnuHelpTutorial.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpTutorial.Text = "Tutorial";
-            this.mnuHelpTutorial.Click += new System.EventHandler(this.mnuHelpTutorial_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(219, 6);
-            // 
-            // mnuHelpContact
-            // 
-            this.mnuHelpContact.Name = "mnuHelpContact";
-            this.mnuHelpContact.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpContact.Text = "Contact ProFast Computing";
-            this.mnuHelpContact.Click += new System.EventHandler(this.mnuHelpContact_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(219, 6);
-            // 
-            // mnuHelpAbout
-            // 
-            this.mnuHelpAbout.Name = "mnuHelpAbout";
-            this.mnuHelpAbout.Size = new System.Drawing.Size(222, 22);
-            this.mnuHelpAbout.Text = "&About";
-            this.mnuHelpAbout.Click += new System.EventHandler(this.mnuHelpAbout_Click);
             // 
             // grpTestsToRun
             // 
@@ -265,6 +109,16 @@
             this.grpTestsToRun.TabIndex = 1;
             this.grpTestsToRun.TabStop = false;
             this.grpTestsToRun.Text = "Select Tests to Run";
+            // 
+            // chkShowProviderSelectorForm
+            // 
+            this.chkShowProviderSelectorForm.AutoSize = true;
+            this.chkShowProviderSelectorForm.Location = new System.Drawing.Point(17, 106);
+            this.chkShowProviderSelectorForm.Name = "chkShowProviderSelectorForm";
+            this.chkShowProviderSelectorForm.Size = new System.Drawing.Size(163, 17);
+            this.chkShowProviderSelectorForm.TabIndex = 2;
+            this.chkShowProviderSelectorForm.Text = "&3 ShowProviderSelectorForm";
+            this.chkShowProviderSelectorForm.UseVisualStyleBackColor = true;
             // 
             // chkGetStaticKeysTest
             // 
@@ -299,18 +153,8 @@
             // 
             // appHelpProvider
             // 
-            this.appHelpProvider.HelpNamespace = "C:\\ProFast\\Projects\\DotNetPrototypesV3\\TestprogProviderForms\\InitWinFormsAppWit" +
-    "hUserAndAppSettings\\InitWinFormsHelpFile.chm";
-            // 
-            // chkShowProviderSelectorForm
-            // 
-            this.chkShowProviderSelectorForm.AutoSize = true;
-            this.chkShowProviderSelectorForm.Location = new System.Drawing.Point(17, 106);
-            this.chkShowProviderSelectorForm.Name = "chkShowProviderSelectorForm";
-            this.chkShowProviderSelectorForm.Size = new System.Drawing.Size(163, 17);
-            this.chkShowProviderSelectorForm.TabIndex = 2;
-            this.chkShowProviderSelectorForm.Text = "&3 ShowProviderSelectorForm";
-            this.chkShowProviderSelectorForm.UseVisualStyleBackColor = true;
+            this.appHelpProvider.HelpNamespace = "C:\\ProFast\\Projects\\DotNetPrototypesV3\\TestprogProviderForms\\InitWinFormsAppWithU" +
+    "serAndAppSettings\\InitWinFormsHelpFile.chm";
             // 
             // MainForm
             // 
@@ -345,29 +189,11 @@
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
         private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
-        private System.Windows.Forms.ToolStripMenuItem mnuTools;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsOptions;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelp;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpAbout;
         private System.Windows.Forms.GroupBox grpTestsToRun;
         private System.Windows.Forms.CheckBox chkShowDateTimeTest;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpContents;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpIndex;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpSearch;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpTutorial;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem mnuHelpContact;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.HelpProvider appHelpProvider;
         private System.Windows.Forms.CheckBox chkEraseOutputBeforeEachTest;
         private System.Windows.Forms.CheckBox chkGetStaticKeysTest;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsOptionsUserSettings;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsOptionsApplicationSettings;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsForm;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsFormSaveScreenLocations;
-        private System.Windows.Forms.ToolStripMenuItem mnuToolsFormRestoreScreenLocations;
         private System.Windows.Forms.CheckBox chkShowProviderSelectorForm;
     }
 }

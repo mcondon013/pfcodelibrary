@@ -431,7 +431,7 @@ namespace PFFileTransferObjects
         /// <param name="ftpRenameTo">New file name.</param>
         /// <param name="ftpUsername">FTP server logon username.</param>
         /// <param name="ftpPassword">FTP server logon password.</param>
-        /// <returns></returns>
+        /// <returns>True if success.</returns>
         public bool RenameFileOnFtpHost(string ftpHost,
                                         string ftpRemoteFile,
                                         string ftpRenameTo,
@@ -770,7 +770,7 @@ namespace PFFileTransferObjects
         }
 
         /// <summary>
-        /// 
+        /// Downloads file from FTP server
         /// </summary>
         /// <param name="ftpDestinationFile">Name of destination file.</param>
         /// <param name="ftpHost">FTP server.</param>
@@ -1018,7 +1018,7 @@ namespace PFFileTransferObjects
         /// <summary>
         /// Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing values.</returns>
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
@@ -1035,7 +1035,7 @@ namespace PFFileTransferObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing names and values.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -1157,7 +1157,7 @@ namespace PFFileTransferObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing names and values.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

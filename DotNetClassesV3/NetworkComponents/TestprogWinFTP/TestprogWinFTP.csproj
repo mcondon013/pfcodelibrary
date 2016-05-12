@@ -54,9 +54,8 @@
     <Reference Include="PFPrinterObjects">
       <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFPrinterObjects.dll</HintPath>
     </Reference>
-    <Reference Include="PFSystemObjects, Version=3.0.4680.21394, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetClassesV3\WinAppComponents\PFSystemObjects\bin\Release\PFSystemObjects.dll</HintPath>
+    <Reference Include="PFSystemObjects">
+      <HintPath>..\..\..\Binaries\ProFast\ClassLibraries\Release\PFSystemObjects.dll</HintPath>
     </Reference>
     <Reference Include="PFTimers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

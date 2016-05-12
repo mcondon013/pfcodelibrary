@@ -30,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFFileTransferObjects.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PFGlobalObjects, Version=3.0.5923.16464, Culture=neutral, processorArchitecture=MSIL">

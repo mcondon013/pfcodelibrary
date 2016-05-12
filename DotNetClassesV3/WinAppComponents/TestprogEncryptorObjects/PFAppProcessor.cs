@@ -17,11 +17,7 @@ namespace pfEncryptorObjects
         private StringBuilder _str = new StringBuilder();
         private bool _saveErrorMessagesToAppLog = false;
 
-        private string _appConfigManagerExe = @"pfAppConfigManager.exe";
-
         private bool _batchMode = false;
-
-        private string _helpFilePath = string.Empty;
 
         //app encryption key 17, 16   IV 49, 16
         private string _zenkPath = @"D332C5A049462DC8" 
@@ -62,21 +58,6 @@ namespace pfEncryptorObjects
         }
 
         /// <summary>
-        /// Path to application help file.
-        /// </summary>
-        public string HelpFilePath
-        {
-            get
-            {
-                return _helpFilePath;
-            }
-            set
-            {
-                _helpFilePath = value;
-            }
-        }
-
-        /// <summary>
         /// Set to true if running in batch mode (i.e. no UI).
         /// </summary>
         public bool BatchMode
@@ -100,84 +81,6 @@ namespace pfEncryptorObjects
                 AppMessages.DisplayErrorMessage(errorMessage, saveErrorMessagesToAppLog);
             else
                 ConsoleMessages.DisplayErrorMessage(errorMessage, saveErrorMessagesToAppLog);
-        }
-
-        /// <summary>
-        /// Routine to add context menu item for pfFolderSize to Windows Explorer.
-        /// </summary>
-        public void ShowAppConfigManager()
-        {
-            PFProcess proc = new PFProcess();
-            string currAppFolder = AppInfo.CurrentEntryAssemblyDirectory;
-            string currAppExePath = AppInfo.CurrentEntryAssembly;
-            string appConfigManagerApp = Path.Combine(currAppFolder, _appConfigManagerExe);
-            string mydocumentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            bool appConfigManagerFound = false;
-
-            try
-            {
-                proc.Arguments = "\"" + currAppExePath + "\" \"" + _helpFilePath + "\" " + "\"Change an Application Setting\"";
-
-                if (File.Exists(appConfigManagerApp))
-                {
-                    appConfigManagerFound = true;
-                    proc.WorkingDirectory = currAppFolder;
-                    proc.ExecutableToRun = appConfigManagerApp;
-                }
-                else
-                {
-                    string configValue = AppConfig.GetStringValueFromConfigFile("appConfigManagerPath", string.Empty);
-                    if (configValue.Length > 0)
-                    {
-                        if (File.Exists(configValue))
-                        {
-                            appConfigManagerFound = true;
-                            proc.WorkingDirectory = Path.GetDirectoryName(configValue);
-                            proc.ExecutableToRun = configValue;
-                        }
-                        else
-                        {
-                            appConfigManagerFound = false;
-                        }
-                    }
-                    else
-                    {
-                        appConfigManagerFound = false;
-
-                    }
-                }
-                if (appConfigManagerFound == false)
-                {
-                    _msg.Length = 0;
-                    _msg.Append("Unable to find Application Configuration Manager Application in current app folder: ");
-                    _msg.Append(currAppFolder);
-                    throw new System.Exception(_msg.ToString());
-                }
-                proc.CreateNoWindow = true;
-                proc.UseShellExecute = true;
-                proc.WindowStyle = PFProcessWindowStyle.Normal;
-                proc.RedirectStandardOutput = false;
-                proc.RedirectStandardError = false;
-                proc.RedirectStandardInput = false;
-                proc.CheckIfProcessWaitingForInput = false;
-                proc.MaxProcessRunSeconds = (int)0;
-
-                proc.Run();
-
-                System.Configuration.ConfigurationManager.RefreshSection("appSettings");
-
-            }
-            catch (System.Exception ex)
-            {
-                _msg.Length = 0;
-                _msg.Append(AppGlobals.AppMessages.FormatErrorMessage(ex));
-                DisplayErrorMessage(_msg.ToString(), _saveErrorMessagesToAppLog);
-            }
-            finally
-            {
-                proc = null;
-            }
-
         }
 
         //encryption Eoutines

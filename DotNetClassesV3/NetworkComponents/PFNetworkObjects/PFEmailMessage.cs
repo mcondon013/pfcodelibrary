@@ -413,7 +413,7 @@ namespace PFNetworkObjects
         /// <summary>
         /// Outputs the contents of the message in string format.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String value.</returns>
         public override string ToString()
         {
             //return base.ToString();
@@ -453,7 +453,7 @@ namespace PFNetworkObjects
         /// <summary>
         /// Routine outputs name, type, scope and value for all class properties and fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing results.</returns>
         public string OutputObjectContents()
         {
             StringBuilder data = new StringBuilder();
@@ -470,7 +470,7 @@ namespace PFNetworkObjects
         /// <summary>
         /// Routine outputs name and value for all properties.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing names and values.</returns>
         public string PropertiesToString()
         {
             StringBuilder data = new StringBuilder();
@@ -592,7 +592,7 @@ namespace PFNetworkObjects
         /// <summary>
         /// Routine outputs name and value for all fields.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String containing names and values.</returns>
         public string FieldsToString()
         {
             StringBuilder data = new StringBuilder();

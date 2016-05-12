@@ -18,7 +18,6 @@ namespace TestprogDocumentObjects
         private StringBuilder _str = new StringBuilder();
         private bool _saveErrorMessagesToAppLog = true;
         private string _appLogFileName = @"app.log";
-        private string _helpFilePath = string.Empty;
 
         PFAppProcessor _appProcessor = new PFAppProcessor();
 
@@ -58,153 +57,11 @@ namespace TestprogDocumentObjects
             CloseForm();
         }
 
-        private void mnuToolsOptionsUserSettings_Click(object sender, EventArgs e)
-        {
-            ShowToolsOptionsUserSettings();
-        }
-
-        private void mnuToolsOptionsApplicationSettings_Click(object sender, EventArgs e)
-        {
-            ShowToolsOptionsApplicationSettings();
-        }
-
-        private void mnuToolsFormSaveScreenLocations_Click(object sender, EventArgs e)
-        {
-            SaveScreenLocations();
-        }
-
-        private void mnuToolsFormRestoreScreenLocations_Click(object sender, EventArgs e)
-        {
-            RestoreDefaultScreenLocations();
-        }
-
-        private void mnuHelpContents_Click(object sender, EventArgs e)
-        {
-            ShowHelpContents();
-        }
-
-        private void mnuHelpIndex_Click(object sender, EventArgs e)
-        {
-            ShowHelpIndex();
-        }
-
-        private void mnuHelpSearch_Click(object sender, EventArgs e)
-        {
-            ShowHelpSearch();
-        }
-
-        private void mnuHelpTutorial_Click(object sender, EventArgs e)
-        {
-            ShowHelpTutorial();
-        }
-
-        private void mnuHelpContact_Click(object sender, EventArgs e)
-        {
-            ShowHelpContact();
-        }
-
-        private void mnuHelpAbout_Click(object sender, EventArgs e)
-        {
-            ShowHelpAbout();
-        }
-
-
 
         //Form Routines
         private void CloseForm()
         {
             this.Close();
-        }
-
-        private void ShowToolsOptionsUserSettings()
-        {
-            UserOptionsForm usrOptionsForm = new UserOptionsForm();
-
-            try
-            {
-                usrOptionsForm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                _msg.Length = 0;
-                _msg.Append(AppGlobals.AppMessages.FormatErrorMessage(ex));
-                AppMessages.DisplayErrorMessage(_msg.ToString(), _saveErrorMessagesToAppLog);
-            }
-            finally
-            {
-                usrOptionsForm.Close();
-                usrOptionsForm = null;
-                this.Focus();
-                this.Refresh();
-            }
-
-        }
-
-        private void ShowToolsOptionsApplicationSettings()
-        {
-            _appProcessor.ShowAppConfigManager();
-            this.SetLoggingValues();
-            this.SetHelpFileValues();
-            this.Focus();
-            this.Refresh();
-        }
-
-
-
-        private void ShowHelpContents()
-        {
-            if (HelpFileExists())
-                Help.ShowHelp(this, _helpFilePath, HelpNavigator.TableOfContents);
-        }
-
-        private void ShowHelpIndex()
-        {
-            if (HelpFileExists())
-                Help.ShowHelp(this, _helpFilePath, HelpNavigator.Index);
-        }
-
-        private void ShowHelpSearch()
-        {
-            if (HelpFileExists())
-                Help.ShowHelp(this, _helpFilePath, HelpNavigator.Find, "");
-        }
-
-        private void ShowHelpTutorial()
-        {
-            if (HelpFileExists())
-                Help.ShowHelp(this, _helpFilePath, HelpNavigator.KeywordIndex, "Tutorial");
-        }
-
-        private void ShowHelpContact()
-        {
-            if (HelpFileExists())
-                Help.ShowHelp(this, _helpFilePath, HelpNavigator.KeywordIndex, "Contact Information");
-        }
-
-        private void ShowHelpAbout()
-        {
-            HelpAboutForm appHelpAboutForm = new HelpAboutForm();
-            appHelpAboutForm.ShowDialog();
-
-        }
-
-        private bool HelpFileExists()
-        {
-            bool ret = false;
-
-            if (File.Exists(_helpFilePath))
-            {
-                ret = true;
-            }
-            else
-            {
-                _msg.Length = 0;
-                _msg.Append("Unable to find Help File: ");
-                _msg.Append(_helpFilePath);
-                AppMessages.DisplayWarningMessage(_msg.ToString());
-            }
-
-            return ret;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -224,8 +81,6 @@ namespace TestprogDocumentObjects
                 SetFormLocationAndSize();
 
                 SetLoggingValues();
-
-                SetHelpFileValues();
 
                 this.chkEraseOutputBeforeEachTest.Checked = true;
 
@@ -284,24 +139,10 @@ namespace TestprogDocumentObjects
             _appProcessor.SaveErrorMessagesToAppLog = _saveErrorMessagesToAppLog;
         }
 
-        internal void SetHelpFileValues()
-        {
-            string configValue = string.Empty;
-
-            string executableFolder = new Uri(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).LocalPath;
-            string helpFileName = AppConfig.GetStringValueFromConfigFile("HelpFileName", "pfFolderSize.chm");
-            string helpFilePath = PFFile.FormatFilePath(executableFolder, helpFileName);
-            this.appHelpProvider.HelpNamespace = helpFilePath;
-            _helpFilePath = helpFilePath;
-
-            _appProcessor.HelpFilePath = _helpFilePath;
-
-        }
         private void InitAppProcessor()
         {
             _appProcessor.SaveErrorMessagesToAppLog = _saveErrorMessagesToAppLog;
             _appProcessor.MessageLogUI = Program._messageLog;
-            _appProcessor.HelpFilePath = _helpFilePath;
         }
 
         private void EnableFormControls()
