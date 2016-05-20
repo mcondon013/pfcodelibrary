@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -27,7 +27,7 @@ namespace PFFileSystemObjects
         private static bool _defaultXCopyOnErrorContinue = true;
         private static int _defaultXCopyMaxNumErrors = 5;
 
-        //private varialbles for properties
+        //private variables for properties
         //private string _path;
 
         //events

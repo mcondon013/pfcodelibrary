@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -31,7 +31,7 @@ namespace TestprogAppUtils
         private string _teststring2 = "Yet another string by bing.";
         public int _publicInt = 666;
 
-        //private varialbles for properties
+        //private variables for properties
         internal bool _testBool = false;
         private string _testString = "Testing ...";
         private int _testInt = -55;

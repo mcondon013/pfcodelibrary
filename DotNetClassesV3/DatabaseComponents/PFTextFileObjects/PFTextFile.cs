@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -50,7 +50,7 @@ namespace PFTextFiles
         private StreamWriter _sw = null;
         private char[] _readBuffer = new char[2000];
 
-        //private varialbles for properties
+        //private variables for properties
         private string _fileName = string.Empty;
         private int _readBufferSize = 2000;
         private bool _fileIsOpen = false;

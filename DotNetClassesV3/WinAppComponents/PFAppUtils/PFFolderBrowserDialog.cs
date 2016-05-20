@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -24,7 +24,7 @@ namespace PFAppUtils
         private StringBuilder _msg = new StringBuilder();
         private StringBuilder _str = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private FolderBrowserDialog _diag = new FolderBrowserDialog();
         private string _initialFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         private string _selectedFolderPath = string.Empty;

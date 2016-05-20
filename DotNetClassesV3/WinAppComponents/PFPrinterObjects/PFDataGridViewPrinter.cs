@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 // Code was originally downloaded from CodeProject.
 // http://www.codeproject.com/Articles/18042/Another-DataGridView-Printer

@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -42,7 +42,7 @@ namespace PFTextFiles
         private int _setColumnDataArrayWithQuotesInx = 1;
         private int _setColumnDataArrayInx = 0;
 
-        //private varialbles for properties
+        //private variables for properties
         private string _lineTerminator = "\r\n";
         private bool _columnNamesOnFirstLine = false;
         private string[] _columnSeparator = new string[1] { "," };

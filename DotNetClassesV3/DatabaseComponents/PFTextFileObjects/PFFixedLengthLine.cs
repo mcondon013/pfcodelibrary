@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -24,7 +24,7 @@ namespace PFTextFiles
         private StringBuilder _out = new StringBuilder();
         private int _minColLen = 1;
 
-        //private varialbles for properties
+        //private variables for properties
         private bool _useLineTerminator = false;
         private bool _columnNamesOnFirstLine = false;
         private bool _allowDataTruncation = false;

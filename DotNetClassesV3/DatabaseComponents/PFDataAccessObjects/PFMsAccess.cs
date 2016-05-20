@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -72,7 +72,7 @@ namespace PFDataAccessObjects
         private string _connectionString = string.Empty;
         private PFKeyValueList<string, string> _connectionStringKeyVals = new PFKeyValueList<string, string>();
 
-        //private varialbles for properties
+        //private variables for properties
         private PFAccessOleDbProvider _oleDbProvider = PFAccessOleDbProvider.MicrosoftACEOLEDB_12_0;
         private string _databasePath = string.Empty;
         private string _databaseUsername = "admin";

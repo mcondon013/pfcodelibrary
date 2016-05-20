@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -28,7 +28,7 @@ namespace PFSQLBuilderObjects
         //private work variables
         private StringBuilder _msg = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private string _connectionString = string.Empty;
         private QueryBuilderDatabasePlatform _databasePlatform = QueryBuilderDatabasePlatform.Universal;
         private AnsiSQLLevel _ansiSQLVersion = AnsiSQLLevel.SQL92;

@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -29,7 +29,7 @@ namespace PFListObjects
         private StringBuilder _msg = new StringBuilder();
         private StringBuilder _str = new StringBuilder();
         private int _eofInx = -1;
-        //private varialbles for properties
+        //private variables for properties
         private int _currItemInx = -1;
         private bool _EOF = true;
 

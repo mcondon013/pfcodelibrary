@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2013
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -24,7 +24,7 @@ namespace pfEncryptorObjects
         //private work variables
         private StringBuilder _msg = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private pfEncryptorOperationType _operationType = pfEncryptorOperationType.Unknown;
         private pfEncryptorObjectType _sourceObjectType = pfEncryptorObjectType.Unknown;
         private pfEncryptorObjectType _destinationObjectType = pfEncryptorObjectType.Unknown;

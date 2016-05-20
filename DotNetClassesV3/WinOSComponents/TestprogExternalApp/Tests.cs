@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -16,7 +16,7 @@ namespace TestprogExternalApp
         private static StringBuilder _msg = new StringBuilder();
         private static StringBuilder _str = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
 
         //properties
 

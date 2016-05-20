@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -29,7 +29,7 @@ namespace TestprogSystemObjectsDLL
         private double _testDouble = -34578.654321;
         private decimal _testDecimal = (decimal)12345.7654321;
 
-        //private varialbles for properties
+        //private variables for properties
 
         //constructors
 

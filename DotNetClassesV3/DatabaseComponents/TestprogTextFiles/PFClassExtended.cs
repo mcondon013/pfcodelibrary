@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -30,7 +30,7 @@ namespace TestprogTextFiles
         private string[] _testStringArray = { "First", "Second", "Third", "Fourth", "Fifth" };
 
 
-        //private varialbles for properties
+        //private variables for properties
 
         //constructors
 

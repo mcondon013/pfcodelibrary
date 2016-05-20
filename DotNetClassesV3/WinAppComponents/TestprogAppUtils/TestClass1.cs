@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -21,7 +21,7 @@ namespace TestprogAppUtils
         //private work variables
         private StringBuilder _msg = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
 
         private string _testString = "testing ...";
 

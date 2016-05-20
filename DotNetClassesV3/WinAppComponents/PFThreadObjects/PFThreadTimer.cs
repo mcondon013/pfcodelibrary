@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -19,7 +19,7 @@ namespace PFThreadObjects
         private StringBuilder _msg = new StringBuilder();
         private StringBuilder _str = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private bool _hasFinished = false;
         private DateTime _startTime = DateTime.MinValue;
         private DateTime _finishTime = DateTime.MinValue;

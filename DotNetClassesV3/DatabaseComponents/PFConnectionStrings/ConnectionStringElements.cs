@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -25,7 +25,7 @@ namespace PFConnectionStrings
         private StringBuilder _msg = new StringBuilder();
 
 
-        //private varialbles for properties
+        //private variables for properties
         PFConnectionDefinition _connectionDefinition = null;
         List<PFConnectionKeyElement> _connectionKeyVals = new List<PFConnectionKeyElement>();
 

@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -23,7 +23,7 @@ namespace PFAppUtils
         //private work variables
         private StringBuilder _msg = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private SaveFileDialog _diag = new SaveFileDialog();
         private string _fileName = string.Empty;
         private string _initialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

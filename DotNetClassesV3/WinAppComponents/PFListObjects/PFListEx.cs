@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -40,7 +40,7 @@ namespace PFListObjects
         //private string _listsIfItemExistsSQL = "select count(*) as numRecsFound from Lists where ListName = '<listname>' and ID = <id> and ListType = 'PFListEx'";
 
 
-        //private varialbles for properties
+        //private variables for properties
         private int _currItemInx = -1;
         private bool _EOF = true;
 

@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -20,7 +20,7 @@ namespace PFThreadObjects
         private StringBuilder _msg = new StringBuilder();
         private StringBuilder _str = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
         private string _workerName = string.Empty;
         private string _workerDescription = string.Empty;
         private bool _hasFinished = false;

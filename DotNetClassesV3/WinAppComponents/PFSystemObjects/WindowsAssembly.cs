@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -19,7 +19,7 @@ namespace PFSystemObjects
         //private work variables
         private static StringBuilder _msg = new StringBuilder();
 
-        //private varialbles for properties
+        //private variables for properties
 
         //constructors
         /// <summary>

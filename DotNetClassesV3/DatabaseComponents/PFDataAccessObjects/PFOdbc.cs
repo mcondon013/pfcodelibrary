@@ -1,6 +1,6 @@
 ﻿//****************************************************************************************************
 //
-// Copyright © ProFast Computing 2012-2015
+// Copyright © ProFast Computing 2012-2016
 //
 //****************************************************************************************************
 using System;
@@ -26,7 +26,7 @@ namespace PFDataAccessObjects
         private StringBuilder _msg = new StringBuilder();
         private DatabasePlatform dbPlatform = DatabasePlatform.ODBC;  //changed from DatabasePlatform.ODBC to Unknown 5/28/13 (MC)  //changed back to DatabasePlatform.ODBC 7/6/13 (MC)
 
-        //private varialbles for properties
+        //private variables for properties
         private OdbcConnection _conn = new OdbcConnection();
         private OdbcCommand _cmd = new OdbcCommand();
         private System.Data.CommandType _commandType = CommandType.Text;

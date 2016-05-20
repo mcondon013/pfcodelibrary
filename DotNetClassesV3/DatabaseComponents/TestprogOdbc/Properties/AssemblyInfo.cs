@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration(".NET 4.0")]
 [assembly: AssemblyCompany("ProFast Computing")]
 [assembly: AssemblyProduct("TestprogOdbc")]
-[assembly: AssemblyCopyright("Copyright © ProFast Computing 2012-2015")]
+[assembly: AssemblyCopyright("Copyright © ProFast Computing 2012-2016")]
 [assembly: AssemblyTrademark("PFApps")]
 [assembly: AssemblyCulture("")]
 
